@@ -23,7 +23,7 @@ import br.com.zup.beagle.widget.ui.ImagePath
 
 class OnboardingScreen : ScreenBuilder {
 
-    val flexGrow = Flex(grow = 1.0)
+    private val flexGrow = Flex(grow = 1.0)
 
     override fun build(): Screen {
         return Screen(
@@ -35,12 +35,12 @@ class OnboardingScreen : ScreenBuilder {
                         context = ContextData("numberPage", 0)
                 ).applyStyle(Style(
                         flex = Flex(grow = 1.0)
-                        )
+                )
                 )
         )
     }
 
-    val imageLogo = Image(
+    private val imageLogo = Image(
             ImagePath.Local.justMobile("Logo")
     ).applyStyle(
             Style(
@@ -51,7 +51,7 @@ class OnboardingScreen : ScreenBuilder {
             )
     )
 
-    val page1 = createPage(
+    private val page1 = createPage(
             text = "Agora já pode usar o aplicativo para procurar prestadores de serviços ou produtos!",
             firstImage = "Product",
             secondImage = "Service",
@@ -60,16 +60,16 @@ class OnboardingScreen : ScreenBuilder {
             displayButton = Display.FLEX
     )
 
-    val page2 = createPage(
+    private val page2 = createPage(
             text = "Procurar serviços, oferecer servicos para pessoas do seu bairro!",
             firstImage = "Product",
             secondImage = "Service",
             nameButton = "",
-            actionButton = SetContext("",""),
+            actionButton = SetContext("", ""),
             displayButton = Display.NONE
     )
 
-    val page3 = createPage(
+    private val page3 = createPage(
             text = "Tudo isso em um só aplicativo, juntando todos comercios e prestadores de servicos em um só lugar!",
             firstImage = "Product",
             secondImage = "Service",
@@ -78,7 +78,7 @@ class OnboardingScreen : ScreenBuilder {
             displayButton = Display.FLEX
     )
 
-    val pageView = PageView(
+    private val pageView = PageView(
             children = listOf(
                     page1,
                     page2,
@@ -89,14 +89,14 @@ class OnboardingScreen : ScreenBuilder {
     )
 
 
-    val pageIndicator = PageIndicator(
+    private val pageIndicator = PageIndicator(
             numberOfPages = 3,
             selectedColor = BLUE,
             unselectedColor = LIGHT_GREY,
             currentPage = expressionOf("@{numberPage}")
     )
 
-    fun createPage(
+    private fun createPage(
             text: String,
             firstImage: String,
             secondImage: String,
@@ -115,7 +115,7 @@ class OnboardingScreen : ScreenBuilder {
             )
     ).applyFlex(flexGrow)
 
-    fun createbutton(text: String, action: Action, displayButton: Display) = Button(
+    private fun createbutton(text: String, action: Action, displayButton: Display) = Button(
             text,
             "styleButtonWhiteSystemSemibold",
             onPress = listOf(
