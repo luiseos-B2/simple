@@ -41,4 +41,6 @@ dependencies {
     implementation "br.com.zup.beagle:android:$beagle_version"
     kapt "br.com.zup.beagle:android-processor:$beagle_version"
 
+    debugImplementation "br.com.zup.beagle:android-preview:$beagle_version"
+
 }
