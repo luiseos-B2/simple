@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Beagle
+import BeagleSchema
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        
+        BeagleConfig.config()
         let rootViewController = MainScreen().screenController()
         window?.rootViewController = rootViewController
-        
         window?.makeKeyAndVisible()
         return true
       }

@@ -13,10 +13,8 @@ import BeagleSchema
 struct MainScreen {
 
     func screenController() -> UIViewController {
-        let screen = Screen {
-            Text("Hello Bitches", widgetProperties: .init(Flex().alignSelf(.center)))
-        }
-        return BeagleScreenViewController(.declarative(screen))
+        let urlRelativa = "/onboarding"
+        return BeagleScreenViewController(.remote(.init(url: urlRelativa)))
     }
 }
 
