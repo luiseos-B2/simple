@@ -14,7 +14,7 @@ import br.com.zup.beagle.widget.layout.*
 import br.com.zup.beagle.widget.pager.PageIndicator
 import br.com.zup.beagle.widget.ui.Text
 
-class OnboardingScreenBuilder : ScreenBuilder {
+class OnboardingScreen : ScreenBuilder {
     override fun build(): Screen {
         return Screen(
                 child = Container(
