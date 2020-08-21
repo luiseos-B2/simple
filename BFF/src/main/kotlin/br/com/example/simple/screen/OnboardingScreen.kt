@@ -11,6 +11,8 @@ import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
 import br.com.zup.beagle.widget.action.Action
+import br.com.zup.beagle.widget.action.Navigate
+import br.com.zup.beagle.widget.action.Route
 import br.com.zup.beagle.widget.action.SetContext
 import br.com.zup.beagle.widget.context.ContextData
 import br.com.zup.beagle.widget.context.expressionOf
@@ -20,6 +22,7 @@ import br.com.zup.beagle.widget.pager.PageIndicator
 import br.com.zup.beagle.widget.ui.Button
 import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.ImagePath
+import br.com.zup.beagle.widget.ui.Text
 
 class OnboardingScreen : ScreenBuilder {
 
@@ -74,7 +77,7 @@ class OnboardingScreen : ScreenBuilder {
             firstImage = "Product",
             secondImage = "Service",
             nameButton = "Proximo",
-            actionButton = SetContext("numberPage", 2),
+            actionButton = Navigate.PushView(route = Route.Remote(url = "/login")),
             displayButton = Display.FLEX
     )
 

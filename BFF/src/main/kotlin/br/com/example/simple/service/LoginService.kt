@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service
 @Service
 class LoginService {
 
-    fun getLoginScreen() = LoginScreen
+    fun getLoginScreen() = LoginScreen()
 
 }

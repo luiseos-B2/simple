@@ -16,10 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
+        window = UIWindow(frame: UIScreen.main.bounds)
         BeagleConfig.config()
         let rootViewController = MainScreen().screenController()
-        window?.rootViewController = rootViewController
+//        let rootViewController = Main()
+        
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.isNavigationBarHidden = true
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         return true
       }
