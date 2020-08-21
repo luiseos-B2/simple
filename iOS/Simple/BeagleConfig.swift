@@ -16,6 +16,7 @@ struct BeagleConfig {
     static func config() {
         let baseUrl: URL? = URL(string: "http://localhost:8080")
         dependencies.urlBuilder = UrlBuilder(baseUrl: baseUrl)
+        dependencies.theme = AppTheme.theme
         Beagle.dependencies = dependencies
     }
 }
