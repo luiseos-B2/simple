@@ -23,6 +23,10 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>br.com.zup.beagle</groupId>
 			<artifactId>beagle-spring-starter</artifactId>
 			<version>${beagle.version}</version>
