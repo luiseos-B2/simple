@@ -15,12 +15,14 @@ struct AppTheme {
     static var darkBlue = #colorLiteral(red: 0.1607843137, green: 0.5098039216, blue: 0.662745098, alpha: 1)
     static let theme = Beagle.AppTheme(styles: [
         "Style.Text.Bold.System.20": styleTextBoldSystem20,
+        "styleTextBoldSystem16": styleTextBoldSystem16,
         "Style.Button.White.System.Bold.16": styleButtonWhiteSystemSemibold,
         "Style.TextInput": designSystemTextInput,
         "Style.button": designSystemStylishButton,
         "Style.Text.System.Light": designSystemText,
         "Style.PasswordButton": designSystemPasswordButton,
         "Style.H1.Text": styleTextH1,
+        "Style.Border.Blue.System.16": styleBorderBlueSystem16,
         "Style.NavigationBar": styleNavigationBar
     ])
     
@@ -29,6 +31,12 @@ struct AppTheme {
             $0?.font = .boldSystemFont(ofSize: 20)
         }
     }
+    
+    static func styleTextBoldSystem16() -> (UITextView?) -> Void {
+           return {
+               $0?.font = .boldSystemFont(ofSize: 18)
+           }
+       }
     
     static func designSystemText() -> (UITextView?) -> Void {
           return {
@@ -53,6 +61,9 @@ struct AppTheme {
         return {
             $0?.borderStyle = .roundedRect
             $0?.font = .systemFont(ofSize: 20.0)
+            let color = #colorLiteral(red: 0.1333333333, green: 0.5058823529, blue: 0.6705882353, alpha: 1)
+            $0?.layer.borderColor = color.cgColor
+            $0?.layer.borderWidth = 1
         }
     }
     
@@ -67,6 +78,16 @@ struct AppTheme {
     static func designSystemPasswordButton() -> (UIButton?) -> Void {
         return {
             $0?.setTitleColor(blue, for: .normal)
+        }
+    }
+    
+    static func styleBorderBlueSystem16() -> (UIButton?) -> Void {
+        return {
+            $0?.setTitleColor(blue, for: .normal)
+             $0?.titleLabel |> BeagleStyle.label(withFont: .systemFont(ofSize: 16, weight: .semibold))
+            let color = #colorLiteral(red: 0.1333333333, green: 0.5058823529, blue: 0.6705882353, alpha: 1)
+            $0?.layer.borderColor = color.cgColor
+            $0?.layer.borderWidth = 1
         }
     }
     

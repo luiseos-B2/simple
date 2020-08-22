@@ -22,7 +22,8 @@ import br.com.zup.beagle.widget.ui.Text
 
 object HomeScreen : ScreenBuilder {
     override fun build(): Screen {
-        return Screen(navigationBar = NavigationBar(title = "Simple", styleId = STYLE_NAVIGATION_BAR),
+        return Screen(
+                safeArea = SafeArea(top = false),
                 style = Style(backgroundColor = LIGHT_BACKGROUND),
                 child = ScrollView(
                 children = listOf(
@@ -106,7 +107,7 @@ object HomeScreen : ScreenBuilder {
                             "Nome do perfume\tUomini Desodorante Colônia Moto Soul 100ml\n" +
                             "Versão\tMoto Soul\n" + "Gênero\tMasculino\n" + "Tipo\tDes. Colônia\n" + "Volume da unidade\t100 mL"),
                     ProductCardTemplate(image = "product6", priceText = "R$ 90.00", productName = "Kit Flower De Floratta\n", description = "Marca\tO Boticário\n" +
-                            "Nome do perfume\tFloratta\n" + "Gênero\tFeminino\n" + "Tipo\tColônia\n" + "Volume da unidade\t90 mL"),
+                            "Nome do perfume\tFloratta\n" + "Gênero\tFeminino\n" + "Tipo\tColônia\n" + "Volume da unidade\t90 mL")
             )
     )
 }

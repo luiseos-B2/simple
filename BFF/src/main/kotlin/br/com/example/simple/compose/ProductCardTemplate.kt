@@ -54,7 +54,7 @@ class ProductCardTemplate(
                     cornerRadius = CornerRadius(20.0),
                     backgroundColor = WHITE,
                     flex = Flex(
-                            alignSelf = AlignSelf.CENTER,
+                            alignSelf = AlignSelf.CENTER
                     )
                 )
             )

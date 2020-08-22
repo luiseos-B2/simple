@@ -38,8 +38,8 @@ class HomeTabBarController: UITabBarController, DeeplinkScreen {
     
     private func setupTabLayout() {
         tabBar.isTranslucent = false
-        tabBar.tintColor = AppTheme.darkBlue
-        tabBar.unselectedItemTintColor = AppTheme.blue
+        tabBar.tintColor = #colorLiteral(red: 0.1333333333, green: 0.5058823529, blue: 0.6705882353, alpha: 1)
+        tabBar.unselectedItemTintColor = #colorLiteral(red: 0.4352941176, green: 0.4352941176, blue: 0.4352941176, alpha: 1)
         selectedIndex = .zero
     }
 }
