@@ -24,7 +24,7 @@ class ProductCardTemplate(
         val description: String
 ) : ComposeComponent {
     override fun build(): ServerDrivenComponent {
-        return Touchable(onPress = listOf(Navigate.PushView(route = Route.Remote(url = "/profile"))), child =
+        return Touchable(onPress = listOf(Navigate.PushView(route = Route.Remote(url = "/store"))), child =
             Container(children =
                 listOf(
                         Image(path = ImagePath.Local.justMobile(image))

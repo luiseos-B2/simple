@@ -2,10 +2,7 @@ package br.com.example.simple.screen
 
 import br.com.example.simple.compose.CategoryTemplate
 import br.com.example.simple.compose.ProductCardTemplate
-import br.com.example.simple.constants.BLUE
-import br.com.example.simple.constants.DARK_BLUE
-import br.com.example.simple.constants.LIGHT_BACKGROUND
-import br.com.example.simple.constants.STYLE_TEXT_H1
+import br.com.example.simple.constants.*
 import br.com.zup.beagle.builder.widget.size
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.ServerDrivenComponent
@@ -25,7 +22,7 @@ import br.com.zup.beagle.widget.ui.Text
 
 object HomeScreen : ScreenBuilder {
     override fun build(): Screen {
-        return Screen(navigationBar = NavigationBar(title = "Simple"),
+        return Screen(navigationBar = NavigationBar(title = "Simple", styleId = STYLE_NAVIGATION_BAR),
                 style = Style(backgroundColor = LIGHT_BACKGROUND),
                 child = ScrollView(
                 children = listOf(
@@ -56,7 +53,7 @@ object HomeScreen : ScreenBuilder {
 
     private val banner = Touchable(
             onPress = listOf(
-                    Navigate.PushView(route = Route.Remote(url = ""))
+                    Navigate.PushView(route = Route.Remote(url = "/store"))
             ),
             child = Image(path = ImagePath.Local.justMobile("banner")).applyStyle(
                 style = Style(
