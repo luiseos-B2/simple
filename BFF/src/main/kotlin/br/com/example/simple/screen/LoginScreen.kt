@@ -87,7 +87,7 @@ class LoginScreen: ScreenBuilder {
             text =  "Entrar",
             styleId = "Style.button",
             onPress = listOf(
-                    Navigate.PushView(route = Route.Remote(url = "/home"))
+                    Navigate.OpenNativeRoute(route = "home")
             )
     ).applyStyle(style = Style(
             size = Size(width = 50.unitPercent(), height = 15.unitPercent()),

@@ -18,28 +18,26 @@ struct AppTheme {
         "styleButtonWhiteSystemSemibold": styleButtonWhiteSystemSemibold,
         "Style.TextInput": designSystemTextInput,
         "Style.button": designSystemStylishButton,
-        "Style.Text.Blue": designSystemBlueText,
+        "Style.Text.System.Light": designSystemText,
         "Style.PasswordButton": designSystemPasswordButton,
         "Style.H1.Text": styleTextH1
     ])
-
+    
     static func styleTextBoldSystem30() -> (UITextView?) -> Void {
         return {
             $0?.font = .boldSystemFont(ofSize: 20)
         }
     }
     
-    static func designSystemBlueText() -> (UITextView?) -> Void {
+    static func designSystemText() -> (UITextView?) -> Void {
           return {
             $0?.font = .systemFont(ofSize: 15)
-            $0?.textColor = darkBlue
           }
       }
     
     static func styleTextH1() -> (UITextView?) -> Void {
         return {
             $0?.font = .boldSystemFont(ofSize: 30)
-            $0?.textColor = darkBlue
         }
     }
     

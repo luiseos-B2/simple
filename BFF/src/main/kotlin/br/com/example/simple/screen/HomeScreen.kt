@@ -1,10 +1,16 @@
 package br.com.example.simple.screen
 
+import br.com.example.simple.compose.CategoryTemplate
+import br.com.example.simple.compose.ProductCardTemplate
+import br.com.example.simple.constants.BLUE
+import br.com.example.simple.constants.DARK_BLUE
+import br.com.example.simple.constants.LIGHT_BACKGROUND
 import br.com.zup.beagle.builder.widget.size
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.ServerDrivenComponent
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
+import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
 import br.com.zup.beagle.widget.action.Navigate
 import br.com.zup.beagle.widget.action.Route
@@ -16,56 +22,32 @@ import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.ImagePath
 import br.com.zup.beagle.widget.ui.Text
 
-class CategorySelector(
-        val text: String,
-        val image: String
-) : ComposeComponent {
-    override fun build(): ServerDrivenComponent {
-        return Container(children =
-        listOf(
-            Touchable(
-                onPress = listOf(
-                    Navigate.PushView(route = Route.Remote(url = ""))
-                ),
-                child = Image(path = ImagePath.Local.justMobile(image), mode = ImageContentMode.FIT_CENTER).applyStyle(
-                                style = Style(
-                                        size = Size(width = 85.unitReal(), height = 85.unitReal()),
-                                        margin = EdgeValue(left = 10.unitReal(), right = 10.unitReal()),
-                                        cornerRadius = CornerRadius(radius = 42.5)
-
-                                )
-                        )
-                ),
-                Text(text = text, alignment = TextAlignment.CENTER, styleId = "Style.Text.Blue")
-            )
-        )
-    }
-}
-
 object HomeScreen : ScreenBuilder {
     override fun build(): Screen {
         return Screen(navigationBar = NavigationBar(title = "Simple"),
+                style = Style(backgroundColor = LIGHT_BACKGROUND),
                 child = ScrollView(
                 children = listOf(
-                    Text(text = "Categorias", styleId = "Style.H1.Text").applyStyle(style = Style(
+                    Text(text = "Categorias", styleId = "Style.H1.Text", textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 5.unitReal())
                         )
                     ),
                     categoriesList,
-                    Text(text = "Oportunidades", styleId = "Style.H1.Text").applyStyle(style = Style(
+                    Text(text = "Oportunidades", styleId = "Style.H1.Text", textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 10.unitReal())
                         )
                     ),
                     opportunitiesList,
-                    Text(text = "Serviços", styleId = "Style.H1.Text").applyStyle(style = Style(
+                    Text(text = "Serviços", styleId = "Style.H1.Text", textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 10.unitReal())
                         )
                     ),
                     opportunitiesList,
-                    Text(text = "Produtos perto de você", styleId = "Style.H1.Text").applyStyle(style = Style(
+                    Text(text = "Produtos perto de você", styleId = "Style.H1.Text", textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 10.unitReal())
                         )
-                    )
+                    ),
+                    products
                 )
             )
         )
@@ -97,10 +79,10 @@ object HomeScreen : ScreenBuilder {
     )
     private val categoriesList = Container(
             children = listOf(
-                    CategorySelector(text = "Produtos", image = "imageBeagle"),
-                    CategorySelector(text = "Lojas", image = "imageBeagle"),
-                    CategorySelector(text = "Serviços", image = "imageBeagle"),
-                    CategorySelector(text = "Oportunidade", image = "imageBeagle")
+                    CategoryTemplate(text = "Produtos", image = "productsicon"),
+                    CategoryTemplate(text = "Lojas", image = "shop"),
+                    CategoryTemplate(text = "Serviços", image = "services"),
+                    CategoryTemplate(text = "Oportunidade", image = "opportunity1")
             )
     ).applyStyle(style = Style(
             flex = Flex(flexDirection = FlexDirection.ROW),
@@ -108,4 +90,25 @@ object HomeScreen : ScreenBuilder {
         )
     )
 
+    private val products = ScrollView(
+            scrollBarEnabled = false,
+            children = listOf(
+                    ProductCardTemplate(image = "product4", priceText = "R$ 7.80", productName = "Batom Basic 01 VulT", description = "Super confortável nos lábios, o Batom Basic da Vult proporciona uma boa cobertura e um acabamento cremoso. Fácil de espalhar e em textura leve, o batom garante lábios com cores sensacionais."),
+                    ProductCardTemplate(image = "product1", priceText = "R$ 10.00", productName = "Camisa Feminina Baby Look Billie Eilish", description = "\n" +
+                            "Tecido: 100%algodão fio 30.1\n" + "\n" +  "ESTAMPA: SUBLIMAÇÃO E VINIL EMBORRACHADO\n" +  "\n" +
+                            "Qualidade do Tecido, Estampa e Costura.\n" + "\n" + "Excelente custo beneficio, preço baixo e qualidade!\n" + "\n" +
+                            "baby look Super confortável, Tecido leve ideal para treinos e Lazer aos finais de semana.\n"),
+                    ProductCardTemplate(image = "product2", priceText = "R$ 20.00", productName = "Camisa Adidas Feminina", description = "Marca\tIBI MODAS\n" +
+                            "Modelo\tBABY LOOK\n" + "Desenho do tecido\tGeométrico\n" + "Outras características\n" +
+                            "Gênero: Feminino\n" + "Material principal: 100%ALGODÃO\n" + "Tipo de manga: Curta\n" + "Tipo de gola: REDONDA"),
+                    ProductCardTemplate(image = "product3", priceText = "R$ 7.00", productName = "Camisa Adidas Masculina", description = "Marca\tIBI MODAS\n" +
+                            "Modelo\tCamiseta\n" + "Desenho do tecido\tGeométrico\n" + "Outras características\n" + "Gênero: Masculino\n" +
+                            "Material principal: 100%ALGODÃO\n" + "Tipo de manga: Curta\n" + "Tipo de gola: REDONDA"),
+                    ProductCardTemplate(image = "product5", priceText = "R$ 76.00", productName = "Colônia Moto Soul 100ml", description = "Marca\tO Boticário\n" +
+                            "Nome do perfume\tUomini Desodorante Colônia Moto Soul 100ml\n" +
+                            "Versão\tMoto Soul\n" + "Gênero\tMasculino\n" + "Tipo\tDes. Colônia\n" + "Volume da unidade\t100 mL"),
+                    ProductCardTemplate(image = "product6", priceText = "R$ 90.00", productName = "Kit Flower De Floratta\n", description = "Marca\tO Boticário\n" +
+                            "Nome do perfume\tFloratta\n" + "Gênero\tFeminino\n" + "Tipo\tColônia\n" + "Volume da unidade\t90 mL"),
+            )
+    )
 }
