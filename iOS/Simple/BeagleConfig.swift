@@ -17,6 +17,13 @@ struct BeagleConfig {
         let baseUrl: URL? = URL(string: "http://localhost:8080")
         dependencies.urlBuilder = UrlBuilder(baseUrl: baseUrl)
         dependencies.theme = AppTheme.theme
+        deeplinkManager()
         Beagle.dependencies = dependencies
+    }
+    
+    static func deeplinkManager() {
+        let deepLinkHandler = DeeplinkScreenManager.shared
+        deepLinkHandler["home"] = HomeTabBarController.self
+        dependencies.deepLinkHandler = deepLinkHandler
     }
 }
