@@ -1,8 +1,10 @@
 package br.com.example.simple.screen
 
 import br.com.example.simple.constants.*
+import br.com.example.simple.constants.BLUE
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.Style
+import br.com.zup.beagle.ext.applyFlex
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
@@ -12,7 +14,12 @@ import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.Container
 import br.com.zup.beagle.widget.layout.Screen
 import br.com.zup.beagle.widget.layout.ScreenBuilder
+import br.com.zup.beagle.widget.navigation.Touchable
 import br.com.zup.beagle.widget.ui.*
+import br.com.zup.beagle.widget.ui.Button
+import br.com.zup.beagle.widget.ui.Image
+import br.com.zup.beagle.widget.ui.ImagePath
+import br.com.zup.beagle.widget.ui.TextInput
 
 class LoginScreen: ScreenBuilder {
 
@@ -42,7 +49,7 @@ class LoginScreen: ScreenBuilder {
 
     private val emailTextInput = TextInput(
             value = "",
-            placeholder = "email",
+            placeholder = "Email",
             type = TextInputType.EMAIL,
             styleId = STYLE_TEXT_INPUT
     ).applyStyle(style = Style(
@@ -53,7 +60,7 @@ class LoginScreen: ScreenBuilder {
 
     private val passwordTextInput = TextInput(
             value = "",
-            placeholder = "password",
+            placeholder = "Senha",
             type = TextInputType.PASSWORD,
             styleId = STYLE_TEXT_INPUT
     ).applyStyle(style = Style(
@@ -62,17 +69,25 @@ class LoginScreen: ScreenBuilder {
         )
     )
 
-    private val passwordButton = Button(
-            text =  "Esqueci minha senha",
-            styleId = STYLE_PASSWORD_BUTTON,
-            onPress = listOf(
-                    Navigate.PushView(route = Route.Remote(url = "/password"))
+    private val passwordButton = Container(
+            children = listOf(
+                    Touchable(
+                            child = Text(
+                                    text = "Esqueci minha senha",
+                                    styleId = STYLE_TEXT_NORMAL_SYSTEM_16
+                            ).applyFlex(
+                                    flex = Flex(alignSelf = AlignSelf.FLEX_START)
+                            ),
+                            onPress = listOf(
+                                    Navigate.PushView(route = Route.Remote(url = "/password"))
+                            )
+                    )
             )
-    ).applyStyle(style = Style(
-            margin = EdgeValue(left = 10.unitReal(), top = 5.unitReal()),
-            flex = Flex(alignSelf = AlignSelf.FLEX_START),
-            size = Size(width = 50.unitPercent(), height = 5.unitPercent())
-        )
+    ).applyStyle(
+            Style(
+                    margin = EdgeValue( top = 10.unitReal()),
+                    size = Size(width = 85.unitPercent(), height = 5.unitPercent())
+            )
     )
 
     private val loginButton = Button(
@@ -93,7 +108,7 @@ class LoginScreen: ScreenBuilder {
             text =  "Cadastrar",
             styleId = STYLE_BUTTON_WHITE_SYSTEM_BOLD_16,
             onPress = listOf(
-                    Navigate.PushView(route = Route.Remote(url = "/signUp"))
+                    Navigate.PushView(route = Route.Remote(url = "/register"))
             )
     ).applyStyle(style = Style(
             size = Size(width = 65.unitPercent(), height = 15.unitPercent()),
