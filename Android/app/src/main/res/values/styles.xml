@@ -5,7 +5,44 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorGray</item>
+        <item name="android:scrollbarThumbVertical">@color/colorGray</item>
+        <item name="android:scrollbarThumbHorizontal">@color/colorGray</item>
         <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="colorControlNormal">@color/colorBlue</item>
+    </style>
+
+    <style name="Design.NaviagtionBar.Default" parent="Widget.AppCompat.Toolbar">
+        <item name="backgroundColor">@color/colorWhite</item>
+        <item name="titleTextAppearance">@style/DesignSystem.Toolbar.TextAppearance</item>
+    </style>
+
+    <style name="DesignSystem.Toolbar.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Style.Text.Bold.System.20" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Style.Button.White.System.Bold.16" parent="Widget.AppCompat.Button">
+        <item name="fontWeight">600</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Style.Text.Normal.System.16" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Style.TextInput" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/text_input_background</item>
     </style>
 
 </resources>
