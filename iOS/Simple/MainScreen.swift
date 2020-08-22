@@ -13,7 +13,7 @@ import BeagleSchema
 struct MainScreen {
 
     func screenController() -> UIViewController {
-        let urlRelativa = "/login"
+        let urlRelativa = "/onboarding"
         return BeagleScreenViewController(.remote(.init(url: urlRelativa)))
     }
 }

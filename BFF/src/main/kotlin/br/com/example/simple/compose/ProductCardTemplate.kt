@@ -1,9 +1,6 @@
 package br.com.example.simple.compose
 
-import br.com.example.simple.constants.BLUE
-import br.com.example.simple.constants.DARK_BLUE
-import br.com.example.simple.constants.LIGHT_GREY
-import br.com.example.simple.constants.WHITE
+import br.com.example.simple.constants.*
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.ServerDrivenComponent
 import br.com.zup.beagle.core.Style
@@ -40,14 +37,14 @@ class ProductCardTemplate(
                                         )
                                     )
                                 ),
-                        Text(text = productName, styleId = "Style.Text.System.Light", alignment = TextAlignment.LEFT, textColor = LIGHT_GREY).applyStyle(style = Style(
+                        Text(text = productName, styleId = STYLE_TEXT_SYSTEM_LIGHT, alignment = TextAlignment.LEFT, textColor = LIGHT_GREY).applyStyle(style = Style(
                                  margin = EdgeValue(top = 10.unitReal(), left = 5.unitReal(), right = 5.unitReal())
                             )
                         ),
-                        Text(text = priceText, styleId = "Style.Text.System.Light", alignment = TextAlignment.LEFT, textColor = LIGHT_GREY).applyStyle(style = Style(
+                        Text(text = priceText, styleId = STYLE_TEXT_BOLD_SYSTEM_20, alignment = TextAlignment.LEFT, textColor = LIGHT_GREY).applyStyle(style = Style(
                                 margin = EdgeValue(top = 10.unitReal(), left = 5.unitReal(), right = 5.unitReal())
                         )),
-                        Text(text = description, styleId = "Style.Text.System.Light", alignment = TextAlignment.LEFT, textColor = LIGHT_GREY).applyStyle(style = Style(
+                        Text(text = description, styleId = STYLE_TEXT_SYSTEM_LIGHT, alignment = TextAlignment.LEFT, textColor = LIGHT_GREY).applyStyle(style = Style(
                                 margin = EdgeValue(top = 10.unitReal(), left = 5.unitReal(), right = 5.unitReal())
                         ))
                 )

@@ -14,16 +14,17 @@ struct AppTheme {
     static var blue = #colorLiteral(red: 0.2588235294, green: 0.6823529412, blue: 0.8549019608, alpha: 1)
     static var darkBlue = #colorLiteral(red: 0.1607843137, green: 0.5098039216, blue: 0.662745098, alpha: 1)
     static let theme = Beagle.AppTheme(styles: [
-        "styleTextBoldSystem30": styleTextBoldSystem30,
-        "styleButtonWhiteSystemSemibold": styleButtonWhiteSystemSemibold,
+        "Style.Text.Bold.System.20": styleTextBoldSystem20,
+        "Style.Button.White.System.Bold.16": styleButtonWhiteSystemSemibold,
         "Style.TextInput": designSystemTextInput,
         "Style.button": designSystemStylishButton,
         "Style.Text.System.Light": designSystemText,
         "Style.PasswordButton": designSystemPasswordButton,
-        "Style.H1.Text": styleTextH1
+        "Style.H1.Text": styleTextH1,
+        "Style.NavigationBar": styleNavigationBar
     ])
     
-    static func styleTextBoldSystem30() -> (UITextView?) -> Void {
+    static func styleTextBoldSystem20() -> (UITextView?) -> Void {
         return {
             $0?.font = .boldSystemFont(ofSize: 20)
         }
@@ -44,7 +45,7 @@ struct AppTheme {
     static func styleButtonWhiteSystemSemibold() -> (UIButton?) -> Void {
         return BeagleStyle.button(withTitleColor: .white)
             <> {
-                $0?.titleLabel |> BeagleStyle.label(withFont: .systemFont(ofSize: 16, weight: .semibold))
+                $0?.titleLabel |> BeagleStyle.label(withFont: .systemFont(ofSize: 16, weight: .bold))
         }
     }
     
@@ -66,6 +67,20 @@ struct AppTheme {
     static func designSystemPasswordButton() -> (UIButton?) -> Void {
         return {
             $0?.setTitleColor(blue, for: .normal)
+        }
+    }
+    
+    static func styleNavigationBar() -> (UINavigationBar?) -> Void {
+        return {
+            let color = #colorLiteral(red: 0.1333333333, green: 0.5058823529, blue: 0.6705882353, alpha: 1)
+            $0?.tintColor = color
+            $0?.barTintColor = .white
+            $0?.isTranslucent = false
+            let navigationFont = UIFont.systemFont(ofSize: 20, weight: .bold)
+            $0?.titleTextAttributes = [
+                .foregroundColor: color ,
+                NSAttributedString.Key.font: navigationFont
+            ]
         }
     }
     

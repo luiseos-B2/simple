@@ -1,6 +1,7 @@
 package br.com.example.simple.compose
 
 import br.com.example.simple.constants.DARK_BLUE
+import br.com.example.simple.constants.STYLE_TEXT_SYSTEM_LIGHT
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.ServerDrivenComponent
 import br.com.zup.beagle.core.Style
@@ -39,7 +40,7 @@ class CategoryTemplate(
                                 )
                         )
                 ),
-                Text(text = text, alignment = TextAlignment.CENTER, styleId = "Style.Text.System.Light", textColor = DARK_BLUE)
+                Text(text = text, alignment = TextAlignment.CENTER, styleId = STYLE_TEXT_SYSTEM_LIGHT, textColor = DARK_BLUE)
             )
         )
     }

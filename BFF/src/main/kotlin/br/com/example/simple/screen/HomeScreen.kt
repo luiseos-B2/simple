@@ -5,6 +5,7 @@ import br.com.example.simple.compose.ProductCardTemplate
 import br.com.example.simple.constants.BLUE
 import br.com.example.simple.constants.DARK_BLUE
 import br.com.example.simple.constants.LIGHT_BACKGROUND
+import br.com.example.simple.constants.STYLE_TEXT_H1
 import br.com.zup.beagle.builder.widget.size
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.ServerDrivenComponent
@@ -28,22 +29,22 @@ object HomeScreen : ScreenBuilder {
                 style = Style(backgroundColor = LIGHT_BACKGROUND),
                 child = ScrollView(
                 children = listOf(
-                    Text(text = "Categorias", styleId = "Style.H1.Text", textColor = DARK_BLUE).applyStyle(style = Style(
+                    Text(text = "Categorias", styleId = STYLE_TEXT_H1, textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 5.unitReal())
                         )
                     ),
                     categoriesList,
-                    Text(text = "Oportunidades", styleId = "Style.H1.Text", textColor = DARK_BLUE).applyStyle(style = Style(
+                    Text(text = "Oportunidades", styleId = STYLE_TEXT_H1, textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 10.unitReal())
                         )
                     ),
                     opportunitiesList,
-                    Text(text = "Serviços", styleId = "Style.H1.Text", textColor = DARK_BLUE).applyStyle(style = Style(
+                    Text(text = "Serviços", styleId = STYLE_TEXT_H1, textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 10.unitReal())
                         )
                     ),
                     opportunitiesList,
-                    Text(text = "Produtos perto de você", styleId = "Style.H1.Text", textColor = DARK_BLUE).applyStyle(style = Style(
+                    Text(text = "Produtos perto de você", styleId = STYLE_TEXT_H1, textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 10.unitReal())
                         )
                     ),

@@ -1,8 +1,7 @@
 package br.com.example.simple.screen
 
 import br.com.example.simple.compose.PageOnboardingTemplate
-import br.com.example.simple.constants.BLUE
-import br.com.example.simple.constants.LIGHT_GREY
+import br.com.example.simple.constants.*
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.Display
 import br.com.zup.beagle.core.Style
@@ -22,7 +21,6 @@ import br.com.zup.beagle.widget.pager.PageIndicator
 import br.com.zup.beagle.widget.ui.Button
 import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.ImagePath
-import br.com.zup.beagle.widget.ui.Text
 
 class OnboardingScreen : ScreenBuilder {
 
@@ -44,7 +42,7 @@ class OnboardingScreen : ScreenBuilder {
     }
 
     private val imageLogo = Image(
-            ImagePath.Local.justMobile("Logo")
+            ImagePath.Local.justMobile(LOGO)
     ).applyStyle(
             Style(
                     margin = EdgeValue(
@@ -56,17 +54,17 @@ class OnboardingScreen : ScreenBuilder {
 
     private val page1 = createPage(
             text = "Agora já pode usar o aplicativo para procurar prestadores de serviços ou produtos!",
-            firstImage = "Product",
-            secondImage = "Service",
+            firstImage = PRODUCT,
+            secondImage = SERVICE,
             nameButton = "Pular",
-            actionButton = SetContext("numberPage", 2),
+            actionButton = Navigate.PushView(route = Route.Remote(url = "/login")),
             displayButton = Display.FLEX
     )
 
     private val page2 = createPage(
             text = "Procurar serviços, oferecer servicos para pessoas do seu bairro!",
-            firstImage = "Product",
-            secondImage = "Service",
+            firstImage = ACORDO,
+            secondImage = SUPPORT,
             nameButton = "",
             actionButton = SetContext("", ""),
             displayButton = Display.NONE
@@ -74,8 +72,8 @@ class OnboardingScreen : ScreenBuilder {
 
     private val page3 = createPage(
             text = "Tudo isso em um só aplicativo, juntando todos comercios e prestadores de servicos em um só lugar!",
-            firstImage = "Product",
-            secondImage = "Service",
+            firstImage = MARKETING,
+            secondImage = VENDAS,
             nameButton = "Proximo",
             actionButton = Navigate.PushView(route = Route.Remote(url = "/login")),
             displayButton = Display.FLEX
@@ -120,7 +118,7 @@ class OnboardingScreen : ScreenBuilder {
 
     private fun createbutton(text: String, action: Action, displayButton: Display) = Button(
             text,
-            "styleButtonWhiteSystemSemibold",
+            STYLE_BUTTON_WHITE_SYSTEM_BOLD_16,
             onPress = listOf(
                     action
             )

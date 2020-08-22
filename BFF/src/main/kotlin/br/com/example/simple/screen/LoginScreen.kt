@@ -1,31 +1,23 @@
 package br.com.example.simple.screen
 
-import br.com.example.simple.constants.BLUE
-import br.com.zup.beagle.annotation.BeaglePreview
-import br.com.zup.beagle.builder.widget.SizeBuilder
+import br.com.example.simple.constants.*
 import br.com.zup.beagle.core.CornerRadius
-import br.com.zup.beagle.core.PositionType
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
-import br.com.zup.beagle.ui.text
 import br.com.zup.beagle.widget.action.Navigate
 import br.com.zup.beagle.widget.action.Route
-import br.com.zup.beagle.widget.context.Bind
-import br.com.zup.beagle.widget.context.ContextData
 import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.Container
 import br.com.zup.beagle.widget.layout.Screen
 import br.com.zup.beagle.widget.layout.ScreenBuilder
 import br.com.zup.beagle.widget.ui.*
-import kotlin.math.sign
 
 class LoginScreen: ScreenBuilder {
 
     override fun build(): Screen {
         return Screen(child = Container(
-                context = ContextData(id = "", value = ""),
                 children = listOf(
                     image,
                     emailTextInput,
@@ -42,7 +34,7 @@ class LoginScreen: ScreenBuilder {
         )
     }
 
-    private val image = Image(path = ImagePath.Local.justMobile("Logo"))
+    private val image = Image(path = ImagePath.Local.justMobile(LOGO))
             .applyStyle(Style(
                     size = Size(width = 250.unitReal(), height = 150.unitReal())
                 )
@@ -52,7 +44,7 @@ class LoginScreen: ScreenBuilder {
             value = "",
             placeholder = "email",
             type = TextInputType.EMAIL,
-            styleId = "Style.TextInput"
+            styleId = STYLE_TEXT_INPUT
     ).applyStyle(style = Style(
             size = Size(width = 85.unitPercent(), height = 5.unitPercent()),
             margin = EdgeValue(top = 50.unitReal())
@@ -63,7 +55,7 @@ class LoginScreen: ScreenBuilder {
             value = "",
             placeholder = "password",
             type = TextInputType.PASSWORD,
-            styleId = "Style.TextInput"
+            styleId = STYLE_TEXT_INPUT
     ).applyStyle(style = Style(
             size = Size(width = 85.unitPercent(), height = 5.unitPercent()),
             margin = EdgeValue(top = 20.unitReal())
@@ -72,7 +64,7 @@ class LoginScreen: ScreenBuilder {
 
     private val passwordButton = Button(
             text =  "Esqueci minha senha",
-            styleId = "Style.PasswordButton",
+            styleId = STYLE_PASSWORD_BUTTON,
             onPress = listOf(
                     Navigate.PushView(route = Route.Remote(url = "/password"))
             )
@@ -85,7 +77,7 @@ class LoginScreen: ScreenBuilder {
 
     private val loginButton = Button(
             text =  "Entrar",
-            styleId = "Style.button",
+            styleId = STYLE_BUTTON_WHITE_SYSTEM_BOLD_16,
             onPress = listOf(
                     Navigate.OpenNativeRoute(route = "home")
             )
@@ -99,7 +91,7 @@ class LoginScreen: ScreenBuilder {
 
     private val signUpButton = Button(
             text =  "Cadastrar",
-            styleId = "Style.button",
+            styleId = STYLE_BUTTON_WHITE_SYSTEM_BOLD_16,
             onPress = listOf(
                     Navigate.PushView(route = Route.Remote(url = "/signUp"))
             )
