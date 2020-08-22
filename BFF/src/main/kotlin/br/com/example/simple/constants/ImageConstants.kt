@@ -9,4 +9,3 @@ const val SUPPORT = "Support"
 const val VENDAS = "Vendas"
 const val MARKETING = "MarketingDigital"
 const val ACORDO = "Acordo"
-

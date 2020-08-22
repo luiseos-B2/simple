@@ -11,20 +11,34 @@ import Beagle
 import BeagleSchema
 
 struct AppTheme {
-    static var blue = UIColor(red: 66, green: 174, blue: 218, alpha: 0)
-
+    static var blue = #colorLiteral(red: 0.2588235294, green: 0.6823529412, blue: 0.8549019608, alpha: 1)
+    static var darkBlue = #colorLiteral(red: 0.1607843137, green: 0.5098039216, blue: 0.662745098, alpha: 1)
     static let theme = Beagle.AppTheme(styles: [
         "Style.Text.Bold.System.20": styleTextBoldSystem20,
         "Style.Button.White.System.Bold.16": styleButtonWhiteSystemSemibold,
         "Style.TextInput": designSystemTextInput,
         "Style.button": designSystemStylishButton,
+        "Style.Text.System.Light": designSystemText,
         "Style.PasswordButton": designSystemPasswordButton,
+        "Style.H1.Text": styleTextH1,
         "Style.NavigationBar": styleNavigationBar
     ])
-
+    
     static func styleTextBoldSystem20() -> (UITextView?) -> Void {
         return {
             $0?.font = .boldSystemFont(ofSize: 20)
+        }
+    }
+    
+    static func designSystemText() -> (UITextView?) -> Void {
+          return {
+            $0?.font = .systemFont(ofSize: 15)
+          }
+      }
+    
+    static func styleTextH1() -> (UITextView?) -> Void {
+        return {
+            $0?.font = .boldSystemFont(ofSize: 30)
         }
     }
     
@@ -51,10 +65,8 @@ struct AppTheme {
     }
     
     static func designSystemPasswordButton() -> (UIButton?) -> Void {
-        return BeagleStyle.button(withTitleColor: blue)
-        <> {
-                $0?.setTitleColor(blue, for: .normal)
-                $0?.titleLabel |> BeagleStyle.label(withFont: .systemFont(ofSize: 16))
+        return {
+            $0?.setTitleColor(blue, for: .normal)
         }
     }
     

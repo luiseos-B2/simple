@@ -24,8 +24,8 @@ import br.com.zup.beagle.widget.ui.TextInput
 class LoginScreen: ScreenBuilder {
 
     override fun build(): Screen {
-        return Screen(child =
-            Container(children = listOf(
+        return Screen(child = Container(
+                children = listOf(
                     image,
                     emailTextInput,
                     passwordTextInput,
@@ -94,7 +94,7 @@ class LoginScreen: ScreenBuilder {
             text =  "Entrar",
             styleId = STYLE_BUTTON_WHITE_SYSTEM_BOLD_16,
             onPress = listOf(
-                    Navigate.PushView(route = Route.Remote(url = "/home"))
+                    Navigate.OpenNativeRoute(route = "home")
             )
     ).applyStyle(style = Style(
             size = Size(width = 50.unitPercent(), height = 15.unitPercent()),
