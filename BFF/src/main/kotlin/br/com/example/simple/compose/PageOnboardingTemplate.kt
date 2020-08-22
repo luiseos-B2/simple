@@ -1,6 +1,7 @@
 package br.com.example.simple.compose
 
 import br.com.example.simple.constants.BLUE
+import br.com.example.simple.constants.STYLE_TEXT_BOLD_SYSTEM_20
 import br.com.zup.beagle.core.PositionType
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
@@ -18,7 +19,7 @@ class PageOnboardingTemplate(val text: String, val firstImage: String, val secon
             children = listOf(
                     Text(
                             text,
-                            "styleTextBoldSystem30",
+                            STYLE_TEXT_BOLD_SYSTEM_20,
                             textColor = BLUE
                     ).applyStyle(
                             Style(
