@@ -13,6 +13,7 @@ import br.com.zup.beagle.ui.text
 import br.com.zup.beagle.widget.action.Navigate
 import br.com.zup.beagle.widget.action.Route
 import br.com.zup.beagle.widget.context.Bind
+import br.com.zup.beagle.widget.context.ContextData
 import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.Container
 import br.com.zup.beagle.widget.layout.Screen
@@ -23,8 +24,9 @@ import kotlin.math.sign
 class LoginScreen: ScreenBuilder {
 
     override fun build(): Screen {
-        return Screen(child =
-            Container(children = listOf(
+        return Screen(child = Container(
+                context = ContextData(id = "", value = ""),
+                children = listOf(
                     image,
                     emailTextInput,
                     passwordTextInput,

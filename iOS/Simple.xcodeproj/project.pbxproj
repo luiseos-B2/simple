@@ -15,6 +15,7 @@
 		98F3D42824EDC807006DAB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F3D42724EDC807006DAB05 /* Assets.xcassets */; };
 		98F3D42B24EDC807006DAB05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F3D42924EDC807006DAB05 /* LaunchScreen.storyboard */; };
 		98F3D43624EDC807006DAB05 /* SimpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3D43524EDC807006DAB05 /* SimpleTests.swift */; };
+		98FF078B24F0B79D00CA9415 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FF078A24F0B79D00CA9415 /* HomeTabBarController.swift */; };
 		EB42D3A530FB557FD4BDEAB0 /* Pods_Simple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111785A80918CCB517FA1B35 /* Pods_Simple.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		98F3D43124EDC807006DAB05 /* SimpleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F3D43524EDC807006DAB05 /* SimpleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTests.swift; sourceTree = "<group>"; };
 		98F3D43724EDC807006DAB05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98FF078A24F0B79D00CA9415 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		DC450B6B45D72EC96097C451 /* Pods_SimpleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71FE0477F85C94FB809A67C /* Pods-Simple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple.debug.xcconfig"; path = "Target Support Files/Pods-Simple/Pods-Simple.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 				98F3D42C24EDC807006DAB05 /* Info.plist */,
 				6E5BE4B424EF326F00536F50 /* BeagleConfig.swift */,
 				6E5BE4B624EF569700536F50 /* Styles.swift */,
+				98FF078A24F0B79D00CA9415 /* HomeTabBarController.swift */,
 			);
 			path = Simple;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				6E5BE4B524EF326F00536F50 /* BeagleConfig.swift in Sources */,
 				98F3D41F24EDC803006DAB05 /* AppDelegate.swift in Sources */,
 				6E5BE4B724EF569700536F50 /* Styles.swift in Sources */,
+				98FF078B24F0B79D00CA9415 /* HomeTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
