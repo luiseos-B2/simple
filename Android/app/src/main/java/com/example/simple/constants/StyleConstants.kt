@@ -1,4 +1,4 @@
-package br.com.example.simple.constants
+package com.example.simple.constants
 
 const val STYLE_TEXT_INPUT = "Style.TextInput"
 const val STYLE_BUTTON_WHITE_SYSTEM_BOLD_16 = "Style.Button.White.System.Bold.16"
