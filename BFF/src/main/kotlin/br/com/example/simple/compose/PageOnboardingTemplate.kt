@@ -57,7 +57,7 @@ class PageOnboardingTemplate(val text: String, val firstImage: String, val secon
             ImagePath.Local.justMobile(name)
     ).applyStyle(
             Style(
-                    size = Size(width = 55.unitPercent(), height = 55.unitPercent()),
+                    size = Size(width = 50.unitPercent(), height = 50.unitPercent()),
                     margin = margin,
                     positionType = positionType,
                     flex = flex
