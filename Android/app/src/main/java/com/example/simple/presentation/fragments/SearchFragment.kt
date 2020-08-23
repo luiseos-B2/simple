@@ -30,7 +30,7 @@ class SearchFragment : Fragment() {
 
     private fun screenSearch() {
         fl_search.removeAllViewsInLayout()
-        fl_search.loadView(this, ScreenRequest("/register"),
+        fl_search.loadView(this, ScreenRequest("/search/opportunity"),
             object :
                 OnStateChanged {
                 override fun invoke(state: BeagleViewState) {

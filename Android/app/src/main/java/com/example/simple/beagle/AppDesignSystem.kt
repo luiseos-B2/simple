@@ -5,7 +5,6 @@ import br.com.zup.beagle.android.setup.DesignSystem
 import com.example.simple.R
 import com.example.simple.constants.*
 
-@Suppress("DUPLICATE_LABEL_IN_WHEN")
 @BeagleComponent
 class AppDesignSystem : DesignSystem() {
 
@@ -42,7 +41,7 @@ class AppDesignSystem : DesignSystem() {
             BANNER_STORE -> R.drawable.banner_store
             REVIEW_USER -> R.drawable.review_user
             INSTAGRAN -> R.drawable.instagram
-            WHATSAPP -> R.drawable.whatsapp
+            WHATSAPP -> R.drawable.ic_whatsapp
             BLACK_BANNER -> R.drawable.black_banner
             ORANGE_BANNER -> R.drawable.orange_banner
             YELLOW_BANNER -> R.drawable.yellow_banner
@@ -51,6 +50,8 @@ class AppDesignSystem : DesignSystem() {
             DICAS -> R.drawable.ic_profits
             MAIS -> R.drawable.ic_mais
             EDITAR -> R.drawable.ic_editar
+            CLEAN_GARDEN -> R.drawable.pessoa
+            SHARE_ICON -> R.drawable.ic_share
             else -> android.R.drawable.ic_menu_help
         }
     }
@@ -65,9 +66,11 @@ class AppDesignSystem : DesignSystem() {
     override fun textStyle(id: String): Int? {
         return when(id){
             STYLE_TEXT_BOLD_SYSTEM_20 -> R.style.Style_Text_Bold_System_20
+            STYLE_TEXT_SYSTEM_BOLD_12 -> R.style.Style_Text_Bold_System_12
             STYLE_TEXT_NORMAL_SYSTEM_16 -> R.style.Style_Text_Normal_System_16
             STYLE_TEXT_H1 -> R.style.Style_H1_Text
             STYLE_TEXT_SYSTEM_LIGHT -> R.style.Style_Text_System_Light
+            STYLE_TEXT_BOLD_SYSTEM_16 -> R.style.Style_Text_Bold_System_16
             else -> null
         }
     }

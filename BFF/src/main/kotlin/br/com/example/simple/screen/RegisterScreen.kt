@@ -86,7 +86,7 @@ class RegisterScreen : ScreenBuilder {
     private val buttonNext = Container(
             children = listOf(
                     Button(
-                            "Proximo",
+                            "Próximo",
                             STYLE_BUTTON_WHITE_SYSTEM_BOLD_16,
                             onPress = listOf(
                                     Navigate.PushView(route = Route.Remote(url = "/address"))
