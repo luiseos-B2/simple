@@ -29,9 +29,9 @@ jobs:
         env:
           HEORKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         working-directory: BFF
-        run: heroku container:push -a simple-hacka
+        run: heroku container:push -a simple-hacka web
       - name: release
         env:
           HEORKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         working-directory: BFF
-        run: heroku container:release -a simple-hacka
+        run: heroku container:release -a simple-hacka web
