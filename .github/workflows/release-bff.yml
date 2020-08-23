@@ -25,13 +25,8 @@ jobs:
         env:
           HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         run: heroku container:login
+      - name: download heroku plugin deploy
+        run: heroku plugins:install heroku-cli-deploy
       - name: build and push
-        env:
-          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         working-directory: BFF
         run: heroku deploy:jar target/*.jar --app simple-hacka
-      - name: release
-        env:
-          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
-        working-directory: BFF
-        run: heroku container:release --app simple-hacka
