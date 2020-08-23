@@ -155,7 +155,7 @@ object AddressScreen : ScreenBuilder {
                                     Alert(
                                             title = "Sucesso!",
                                             message = "Cadastro realizado com sucesso!",
-                                            onPressOk = Navigate.PushView(route = Route.Remote(url = "/home"))
+                                            onPressOk = Navigate.OpenNativeRoute(route = "home")
                                     ),
                                     SetContext(
                                             contextId = "address",
