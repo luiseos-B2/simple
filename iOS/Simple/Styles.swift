@@ -64,6 +64,8 @@ struct AppTheme {
             let color = #colorLiteral(red: 0.1333333333, green: 0.5058823529, blue: 0.6705882353, alpha: 1)
             $0?.layer.borderColor = color.cgColor
             $0?.layer.borderWidth = 1
+            $0?.textColor = UIColor.lightGray
+            $0?.layer.cornerRadius = 8
         }
     }
     
