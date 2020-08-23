@@ -29,4 +29,6 @@ jobs:
         run: heroku plugins:install heroku-cli-deploy
       - name: build and push
         working-directory: BFF
+        env:
+          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         run: heroku deploy:jar target/*.jar --app simple-hacka
