@@ -39,6 +39,18 @@ class AppDesignSystem : DesignSystem() {
             EXIT -> R.drawable.ic_remover
             PUBLICACOES -> R.drawable.ic_aparecer
             PROFILE -> R.drawable.profile
+            BANNER_STORE -> R.drawable.banner_store
+            REVIEW_USER -> R.drawable.review_user
+            INSTAGRAN -> R.drawable.instagram
+            WHATSAPP -> R.drawable.whatsapp
+            BLACK_BANNER -> R.drawable.black_banner
+            ORANGE_BANNER -> R.drawable.orange_banner
+            YELLOW_BANNER -> R.drawable.yellow_banner
+            BLUE_BANNER  -> R.drawable.blue_banner
+            ORANGE_BANNER2 -> R.drawable.orange_banner2
+            DICAS -> R.drawable.ic_profits
+            MAIS -> R.drawable.ic_mais
+            EDITAR -> R.drawable.ic_editar
             else -> android.R.drawable.ic_menu_help
         }
     }
