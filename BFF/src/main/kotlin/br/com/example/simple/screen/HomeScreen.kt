@@ -2,10 +2,7 @@ package br.com.example.simple.screen
 
 import br.com.example.simple.compose.CategoryTemplate
 import br.com.example.simple.compose.ProductCardTemplate
-import br.com.example.simple.constants.BLUE
-import br.com.example.simple.constants.DARK_BLUE
-import br.com.example.simple.constants.LIGHT_BACKGROUND
-import br.com.example.simple.constants.STYLE_TEXT_H1
+import br.com.example.simple.constants.*
 import br.com.zup.beagle.builder.widget.size
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.ServerDrivenComponent
@@ -25,7 +22,8 @@ import br.com.zup.beagle.widget.ui.Text
 
 object HomeScreen : ScreenBuilder {
     override fun build(): Screen {
-        return Screen(navigationBar = NavigationBar(title = "Simple"),
+        return Screen(
+                safeArea = SafeArea(top = false),
                 style = Style(backgroundColor = LIGHT_BACKGROUND),
                 child = ScrollView(
                 children = listOf(
@@ -56,7 +54,7 @@ object HomeScreen : ScreenBuilder {
 
     private val banner = Touchable(
             onPress = listOf(
-                    Navigate.PushView(route = Route.Remote(url = ""))
+                    Navigate.PushView(route = Route.Remote(url = "/store"))
             ),
             child = Image(path = ImagePath.Local.justMobile("banner")).applyStyle(
                 style = Style(
@@ -109,7 +107,7 @@ object HomeScreen : ScreenBuilder {
                             "Nome do perfume\tUomini Desodorante Colônia Moto Soul 100ml\n" +
                             "Versão\tMoto Soul\n" + "Gênero\tMasculino\n" + "Tipo\tDes. Colônia\n" + "Volume da unidade\t100 mL"),
                     ProductCardTemplate(image = "product6", priceText = "R$ 90.00", productName = "Kit Flower De Floratta\n", description = "Marca\tO Boticário\n" +
-                            "Nome do perfume\tFloratta\n" + "Gênero\tFeminino\n" + "Tipo\tColônia\n" + "Volume da unidade\t90 mL"),
+                            "Nome do perfume\tFloratta\n" + "Gênero\tFeminino\n" + "Tipo\tColônia\n" + "Volume da unidade\t90 mL")
             )
     )
 }

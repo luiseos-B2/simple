@@ -29,7 +29,7 @@ class CategoryTemplate(
         listOf(
                 Touchable(
                         onPress = listOf(
-                                Navigate.PushView(route = Route.Remote(url = ""))
+                                Navigate.PushView(route = Route.Remote(url = "/search"))
                         ),
                         child = Image(path = ImagePath.Local.justMobile(image), mode = ImageContentMode.FIT_CENTER).applyStyle(
                                 style = Style(
