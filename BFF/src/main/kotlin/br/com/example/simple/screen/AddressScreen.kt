@@ -28,11 +28,9 @@ data class Data(
 object AddressScreen : ScreenBuilder {
 
     var styleMargin = Style(
-            margin = EdgeValue(
-                    top = 15.unitReal(),
-                    left = 25.unitReal(),
-                    right = 25.unitReal()
-            )
+            size = Size(width = 85.unitPercent(), height = 5.unitPercent()),
+            margin = EdgeValue(top = 20.unitReal()),
+            flex = Flex(alignSelf = AlignSelf.CENTER)
     )
 
     override fun build() = Screen(
@@ -45,7 +43,12 @@ object AddressScreen : ScreenBuilder {
                     children = listOf(
                             imageAddress,
                             textInputZip,
-                            textsInput,
+                            textInputRua,
+                            textInputNumero,
+                            textInputBairro,
+                            textInputCidade,
+                            textInputEstado,
+                            textInputComplemento,
                             button
                     ),
                     context = ContextData(
@@ -110,40 +113,41 @@ object AddressScreen : ScreenBuilder {
             )
     ).applyStyle(styleMargin)
 
-    private val textsInput = Container(
-            children = listOf(
-                    createTextInput(
-                            textInputPlaceholder = "Rua",
-                            textInputValue = "@{address.data.rua}",
-                            contextPath = "data.rua"
-                    ),
-                    createTextInput(
-                            textInputPlaceholder = "Numero",
-                            textInputValue = "@{address.data.numero}",
-                            contextPath = "data.numero",
-                            type = TextInputType.NUMBER
-                    ),
-                    createTextInput(
-                            textInputPlaceholder = "Bairro",
-                            textInputValue = "@{address.data.bairro}",
-                            contextPath = "data.bairro"
-                    ),
-                    createTextInput(
-                            textInputPlaceholder = "Cidade",
-                            textInputValue = "@{address.data.cidade}",
-                            contextPath = "data.cidade"
-                    ),
-                    createTextInput(
-                            textInputPlaceholder = "Estado",
-                            textInputValue = "@{address.data.estado}",
-                            contextPath = "data.estado"
-                    ),
-                    createTextInput(
-                            textInputPlaceholder = "Complemento",
-                            textInputValue = "@{address.data.complemento}",
-                            contextPath = "data.complemento"
-                    )
-            )
+    private val textInputRua = createTextInput(
+            textInputPlaceholder = "Rua",
+            textInputValue = "@{address.data.rua}",
+            contextPath = "data.rua"
+    )
+
+    private val textInputNumero =  createTextInput(
+            textInputPlaceholder = "Numero",
+            textInputValue = "@{address.data.numero}",
+            contextPath = "data.numero",
+            type = TextInputType.NUMBER
+    )
+
+    private val textInputBairro =  createTextInput(
+            textInputPlaceholder = "Bairro",
+            textInputValue = "@{address.data.bairro}",
+            contextPath = "data.bairro"
+    )
+
+    private val textInputCidade =  createTextInput(
+            textInputPlaceholder = "Cidade",
+            textInputValue = "@{address.data.cidade}",
+            contextPath = "data.cidade"
+    )
+
+    private val textInputEstado =   createTextInput(
+            textInputPlaceholder = "Estado",
+            textInputValue = "@{address.data.estado}",
+            contextPath = "data.estado"
+    )
+
+    private val textInputComplemento = createTextInput(
+            textInputPlaceholder = "Complemento",
+            textInputValue = "@{address.data.complemento}",
+            contextPath = "data.complemento"
     )
 
     private val button = Container(

@@ -48,7 +48,7 @@ object ProfileScreen: ScreenBuilder {
                         size = Size(width = 50.unitPercent(), height = 20.unitPercent()),
                         margin = EdgeValue(top = 10.unitReal()),
                         cornerRadius = CornerRadius(radius = 10.0),
-                        backgroundColor = WHITE
+                        backgroundColor = LIGHT_BACKGROUND
                 )
                 )
         )).applyStyle(style = Style(
