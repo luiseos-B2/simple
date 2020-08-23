@@ -74,7 +74,8 @@ class LoginScreen: ScreenBuilder {
                     Touchable(
                             child = Text(
                                     text = "Esqueci minha senha",
-                                    styleId = STYLE_TEXT_NORMAL_SYSTEM_16
+                                    styleId = STYLE_TEXT_BOLD_SYSTEM_16,
+                                    textColor = BLUE
                             ).applyFlex(
                                     flex = Flex(alignSelf = AlignSelf.FLEX_START)
                             ),

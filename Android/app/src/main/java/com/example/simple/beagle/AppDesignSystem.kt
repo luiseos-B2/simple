@@ -19,6 +19,10 @@ class AppDesignSystem : DesignSystem() {
             VENDAS -> R.drawable.ic_vendas
             SUPPORT -> R.drawable.ic_customer_support
             ADDRESS -> R.drawable.ic_map
+            OPPORTUNITY -> R.drawable.ic_travel
+            SERVICES -> R.drawable.ic_consult
+            SHOP -> R.drawable.ic_shop
+            PRODUCTSICON -> R.drawable.ic_supermarket
             else -> android.R.drawable.ic_menu_help
         }
     }
