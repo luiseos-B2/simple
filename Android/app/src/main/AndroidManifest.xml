@@ -13,7 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".beagle.AppBeagleActivity"></activity>
+        <activity android:name=".presentation.activity.HomeActivity">
+            <intent-filter>
+                <action android:name="home" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".beagle.AppBeagleActivity" />
         <activity android:name=".presentation.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +29,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:exported="true"
             android:name="br.com.zup.beagle.android.preview.PreviewActivity"
-            android:theme="@style/AppTheme"/>
+            android:exported="true"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
