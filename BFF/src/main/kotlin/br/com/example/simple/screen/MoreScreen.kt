@@ -30,7 +30,7 @@ object MoreScreen: ScreenBuilder {
     }
 
     private val textTitle = Text(
-            "Mais",
+            "Menu",
             textColor = BLUE,
             styleId = STYLE_TEXT_H1
     ).applyStyle(

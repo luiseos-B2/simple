@@ -20,7 +20,8 @@
 
             </intent-filter>
         </activity>
-        <activity android:name=".beagle.AppBeagleActivity" />
+        <activity android:name=".beagle.AppBeagleActivity"
+            android:windowSoftInputMode="adjustNothing"/>
         <activity android:name=".presentation.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

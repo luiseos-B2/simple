@@ -35,9 +35,26 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="Style.Border.Blue.System.16" parent="Widget.AppCompat.Button">
+        <item name="fontWeight">600</item>
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:gravity">center</item>
+        <item name="background">@drawable/text_input_background</item>
+    </style>
+
     <style name="Style.Text.Normal.System.16" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/colorBlue</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Style.H1.Text" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+
+    <style name="Style.Text.System.Light" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">15sp</item>
     </style>
 
     <style name="Style.TextInput" parent="Widget.AppCompat.EditText">

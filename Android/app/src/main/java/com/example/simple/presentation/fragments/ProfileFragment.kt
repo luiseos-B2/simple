@@ -30,7 +30,7 @@ class ProfileFragment : Fragment() {
 
     private fun screenProfile() {
         fl_profile.removeAllViewsInLayout()
-        fl_profile.loadView(this, ScreenRequest("/onboarding"),
+        fl_profile.loadView(this, ScreenRequest("/profile"),
             object :
                 OnStateChanged {
                 override fun invoke(state: BeagleViewState) {

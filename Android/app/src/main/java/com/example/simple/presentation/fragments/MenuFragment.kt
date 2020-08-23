@@ -30,7 +30,7 @@ class MenuFragment : Fragment() {
 
     private fun screenHome() {
         fl_menu.removeAllViewsInLayout()
-        fl_menu.loadView(this, ScreenRequest("/address"),
+        fl_menu.loadView(this, ScreenRequest("/menu"),
             object :
                 OnStateChanged {
                 override fun invoke(state: BeagleViewState) {

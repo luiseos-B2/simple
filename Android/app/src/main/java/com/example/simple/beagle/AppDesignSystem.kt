@@ -5,6 +5,7 @@ import br.com.zup.beagle.android.setup.DesignSystem
 import com.example.simple.R
 import com.example.simple.constants.*
 
+@Suppress("DUPLICATE_LABEL_IN_WHEN")
 @BeagleComponent
 class AppDesignSystem : DesignSystem() {
 
@@ -23,6 +24,21 @@ class AppDesignSystem : DesignSystem() {
             SERVICES -> R.drawable.ic_consult
             SHOP -> R.drawable.ic_shop
             PRODUCTSICON -> R.drawable.ic_supermarket
+            PRODUCT1 -> R.drawable.product1
+            PRODUCT2 -> R.drawable.product2
+            PRODUCT3 -> R.drawable.product3
+            PRODUCT4 -> R.drawable.product4
+            PRODUCT5 -> R.drawable.product5
+            PRODUCT6 -> R.drawable.product6
+            BANNER -> R.drawable.banner
+            LOJA -> R.drawable.ic_loja
+            BACKBUTTON -> R.drawable.ic_chevron
+            POLICY -> R.drawable.ic_insurance
+            NOTIFICATION -> R.drawable.ic_alert
+            INFORMATION -> R.drawable.ic_diploma
+            EXIT -> R.drawable.ic_remover
+            PUBLICACOES -> R.drawable.ic_aparecer
+            PROFILE -> R.drawable.profile
             else -> android.R.drawable.ic_menu_help
         }
     }
@@ -38,6 +54,8 @@ class AppDesignSystem : DesignSystem() {
         return when(id){
             STYLE_TEXT_BOLD_SYSTEM_20 -> R.style.Style_Text_Bold_System_20
             STYLE_TEXT_NORMAL_SYSTEM_16 -> R.style.Style_Text_Normal_System_16
+            STYLE_TEXT_H1 -> R.style.Style_H1_Text
+            STYLE_TEXT_SYSTEM_LIGHT -> R.style.Style_Text_System_Light
             else -> null
         }
     }
@@ -45,6 +63,7 @@ class AppDesignSystem : DesignSystem() {
     override fun buttonStyle(id: String): Int? {
         return when(id){
            STYLE_BUTTON_WHITE_SYSTEM_BOLD_16 -> R.style.Style_Button_White_System_Bold_16
+            STYLE_BUTTON_BORDER -> R.style.Style_Border_Blue_System_16
             else -> null
         }
     }
