@@ -44,35 +44,35 @@ object MoreScreen: ScreenBuilder {
 
     private val buttonDicas = ButtonDefaultCompose(
             textButton = "Dicas de Negócios",
-            action = Navigate.PushView(route = Route.Remote(url = "/dicas")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/dicas")),
             nameIcon = DICAS,
             displayView = Display.FLEX
     ).build()
 
     private val buttonPolicyPrivacy = ButtonDefaultCompose(
             textButton = "Política de Privacidade",
-            action = Navigate.PushView(route = Route.Remote(url = "/policy")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/policy")),
             nameIcon = POLICY,
             displayView = Display.FLEX
     ).build()
 
     private val buttonNotification = ButtonDefaultCompose(
             textButton = "Notificações",
-            action = Navigate.PushView(route = Route.Remote(url = "/notification")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/notification")),
             nameIcon = NOTIFICATION,
             displayView = Display.FLEX
     ).build()
 
     private val buttonLegalInformation = ButtonDefaultCompose(
             textButton = "Informações Legais",
-            action = Navigate.PushView(route = Route.Remote(url = "/information")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/information")),
             nameIcon = INFORMATION,
             displayView = Display.FLEX
     ).build()
 
     private val buttonExit = ButtonDefaultCompose(
             textButton = "Sair",
-            action = Navigate.PushView(route = Route.Remote(url = "/login")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/login")),
             nameIcon = EXIT,
             displayView = Display.NONE
     ).build()

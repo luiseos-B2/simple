@@ -6,6 +6,7 @@ import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.ServerDrivenComponent
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
+import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
 import br.com.zup.beagle.widget.action.Navigate
 import br.com.zup.beagle.widget.action.Route
@@ -33,7 +34,7 @@ class CategoryTemplate(
                         ),
                         child = Image(path = ImagePath.Local.justMobile(image), mode = ImageContentMode.FIT_CENTER).applyStyle(
                                 style = Style(
-                                        size = Size(width = 85.unitReal(), height = 85.unitReal()),
+                                        size = Size(width = 80.unitPercent(), height = 85.unitReal()),
                                         margin = EdgeValue(left = 10.unitReal(), right = 10.unitReal()),
                                         cornerRadius = CornerRadius(radius = 42.5)
 

@@ -50,7 +50,7 @@ class ProductCardTemplate(
                 )
             ).applyStyle(style = Style(
                     margin = EdgeValue(top = 10.unitReal(), left = 10.unitReal(), right = 10.unitReal()),
-                    size = Size(width = 90.unitPercent(), height = 400.unitReal()),
+                    size = Size(width = 90.unitPercent(), height = 90.unitPercent()),
                     cornerRadius = CornerRadius(20.0),
                     backgroundColor = WHITE,
                     flex = Flex(

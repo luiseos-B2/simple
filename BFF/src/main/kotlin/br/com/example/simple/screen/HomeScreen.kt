@@ -2,6 +2,7 @@ package br.com.example.simple.screen
 
 import br.com.example.simple.compose.CategoryTemplate
 import br.com.example.simple.compose.ProductCardTemplate
+import br.com.example.simple.compose.ServicesBannerTemplate
 import br.com.example.simple.constants.*
 import br.com.zup.beagle.builder.widget.size
 import br.com.zup.beagle.core.CornerRadius
@@ -41,7 +42,7 @@ object HomeScreen : ScreenBuilder {
                             margin = EdgeValue(top = 10.unitReal())
                         )
                     ),
-                    opportunitiesList,
+                    serviceList,
                     Text(text = "Produtos perto de você", styleId = STYLE_TEXT_H1, textColor = DARK_BLUE).applyStyle(style = Style(
                             margin = EdgeValue(top = 10.unitReal())
                         )
@@ -63,19 +64,29 @@ object HomeScreen : ScreenBuilder {
                 )
          )
     )
+
+    private val serviceList = ScrollView(
+            scrollBarEnabled = false,
+            scrollDirection = ScrollAxis.HORIZONTAL,
+            children = listOf(
+                    ServicesBannerTemplate(image = "blackBanner", description = "\nPrecisa de alguma ajuda para reformar alguns móveis de madeira?\nPor favor, entre em contato!", textColor = WHITE),
+                    ServicesBannerTemplate(image = "orangeBanner", description = "\nSeu celular ou computador está com defeito?\nConte comigo!\n", textColor = BLACK),
+                    ServicesBannerTemplate(image = "yellowBanner", description = "\nOfereço meus serviços como entegrador no período da tarde e noite.\nPara mais informações entre em contato.", textColor = BLACK),
+                    ServicesBannerTemplate(image = "blueBanner", description = "\nPrecisa de um motorista e gostaria de um preço mais barato que uber?\nEntre em contato.", textColor = BLACK)
+            )
+    )
+
     private val opportunitiesList = ScrollView(
             scrollBarEnabled = false,
             scrollDirection = ScrollAxis.HORIZONTAL,
             children = listOf(
-                    banner,
-                    banner,
-                    banner,
-                    banner,
-                    banner,
-                    banner,
-                    banner
+                    ServicesBannerTemplate(image = "blueBanner", description = "\nOportunidade de serviço para pedreiros para trabalhar na parte da manhã!\nEntre em contato.", textColor = BLACK),
+                    ServicesBannerTemplate(image = "yellowBanner", description = "\nPrecisamos de cabelereiros com disponibilidade na parte da tarde.\nPara mais informações entre em contato.", textColor = BLACK),
+                    ServicesBannerTemplate(image = "orangeBanner", description = "\nOportunidade para mecânico! Horário integral, \npara mais informações entre em contato.", textColor = BLACK),
+                    ServicesBannerTemplate(image = "orangeBanner2", description = "\nOportunidade para entegrador nos bairros: Santa Monica, Centro.\nEntre em contato.", textColor = BLACK)
             )
     )
+
     private val categoriesList = Container(
             children = listOf(
                     CategoryTemplate(text = "Produtos", image = "productsicon"),

@@ -12,6 +12,7 @@ object NotificationScreen: ScreenBuilder {
         return Screen(
                 navigationBar = NavigationBar(
                         "Notificações",
+                        showBackButton = true,
                         styleId = STYLE_NAVIGATION_BAR
                 ),
                 child = Container(

@@ -29,7 +29,7 @@ object ProfileScreen: ScreenBuilder {
                 listOf(
                         profileContainer,
                         profileOptions
-                )
+                    )
                 )
         )
     }
@@ -70,21 +70,21 @@ object ProfileScreen: ScreenBuilder {
 
     private val buttonMinhaLoja = ButtonDefaultCompose(
             textButton = "Minha Loja",
-            action = Navigate.PushView(route = Route.Remote(url = "/store")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/store")),
             nameIcon = LOJA,
             displayView = Display.FLEX
     ).build()
 
     private val buttonMeusProdutos = ButtonDefaultCompose(
             textButton = "Meus Produtos",
-            action = Navigate.PushView(route = Route.Remote(url = "/products")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/products")),
             nameIcon = PRODUCT,
             displayView = Display.FLEX
     ).build()
 
     private val buttonPublicacoes = ButtonDefaultCompose(
             textButton = "Minhas Publicações",
-            action = Navigate.PushView(route = Route.Remote(url = "/publicacoes")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/publicacoes")),
             nameIcon = PUBLICACOES,
             displayView = Display.NONE
     ).build()

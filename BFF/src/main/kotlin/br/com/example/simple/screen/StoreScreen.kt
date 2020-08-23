@@ -5,22 +5,12 @@ import br.com.example.simple.compose.ReviewTemplate
 import br.com.example.simple.compose.StoreBannerTemplate
 import br.com.example.simple.constants.LIGHT_BACKGROUND
 import br.com.example.simple.constants.STYLE_NAVIGATION_BAR
-import br.com.example.simple.constants.STYLE_TEXT_SYSTEM_LIGHT
-import br.com.example.simple.constants.WHITE
-import br.com.zup.beagle.builder.core.StyleBuilder
-import br.com.zup.beagle.core.CornerRadius
-import br.com.zup.beagle.core.PositionType
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
-import br.com.zup.beagle.widget.action.Navigate
-import br.com.zup.beagle.widget.action.SetContext
-import br.com.zup.beagle.widget.context.Bind
-import br.com.zup.beagle.widget.context.ContextData
 import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.*
-import br.com.zup.beagle.widget.navigation.Touchable
 import br.com.zup.beagle.widget.ui.*
 
 object StoreScreen: ScreenBuilder {
@@ -34,15 +24,15 @@ object StoreScreen: ScreenBuilder {
                         Container(children = listOf(oldTab)).applyStyle(
                                 style = Style(
                                         backgroundColor = LIGHT_BACKGROUND,
-                                        size = Size(width = 95.unitPercent(), height = 100.unitPercent()),
-                                        flex = Flex(alignSelf = AlignSelf.CENTER)))))
+                                        size = Size(width = 100.unitPercent(), height = 100.unitPercent()))))
+                )
         )
     }
 
     private val promotionsBanner = Image(path = ImagePath.Local.justMobile("banner"), mode = ImageContentMode.FIT_CENTER).applyStyle(
             style = Style(
                     size = Size(width = 300.unitReal(), height = 200.unitReal()),
-                    margin = EdgeValue(top = 10.unitReal(), left = 5.unitReal()),
+                    margin = EdgeValue(left = 5.unitReal()),
                     flex = Flex(alignSelf = AlignSelf.FLEX_START)
             ))
 
