@@ -30,7 +30,7 @@ object MoreScreen: ScreenBuilder {
     }
 
     private val textTitle = Text(
-            "Sobre",
+            "Mais",
             textColor = BLUE,
             styleId = STYLE_TEXT_H1
     ).applyStyle(
@@ -41,6 +41,13 @@ object MoreScreen: ScreenBuilder {
                     )
             )
     )
+
+    private val buttonDicas = ButtonDefaultCompose(
+            textButton = "Dicas de Negócios",
+            action = Navigate.PushView(route = Route.Remote(url = "/dicas")),
+            nameIcon = DICAS,
+            displayView = Display.FLEX
+    ).build()
 
     private val buttonPolicyPrivacy = ButtonDefaultCompose(
             textButton = "Política de Privacidade",
@@ -73,6 +80,7 @@ object MoreScreen: ScreenBuilder {
     private val profileOptions = Container(
             children =
             listOf(
+                    buttonDicas,
                     buttonNotification,
                     buttonPolicyPrivacy,
                     buttonLegalInformation,

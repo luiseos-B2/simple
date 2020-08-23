@@ -44,7 +44,6 @@ class HomeTabBarController: UITabBarController, DeeplinkScreen {
     }
 }
 
-
 extension HomeTabBarController {
     static func makeTabControllers() -> [UIViewController] {
         var controllers: [UIViewController] = []
@@ -99,7 +98,7 @@ extension HomeTabBarController {
     }
     
     static func makePostViewController() -> UIViewController {
-        let controller = BeagleScreenViewController(.remote(.init(url: "/post")))
+        let controller = PostViewController()
         controller.tabBarItem = UITabBarItem(
             title: "Post",
             image: UIImage(named: "plus"),

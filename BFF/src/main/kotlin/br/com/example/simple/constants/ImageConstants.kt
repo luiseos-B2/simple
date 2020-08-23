@@ -18,4 +18,6 @@ const val EXIT = "Sair"
 const val LOJA = "MinhaLoja"
 const val PRODUTOS = "Produtos"
 const val PUBLICACOES = "Publicacoes"
+const val DICAS = "Dicas"
+const val MAIS = "Mais"
 
