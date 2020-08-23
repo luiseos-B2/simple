@@ -72,7 +72,7 @@ object MoreScreen: ScreenBuilder {
 
     private val buttonExit = ButtonDefaultCompose(
             textButton = "Sair",
-            action = Navigate.PushStack(route = Route.Remote(url = "/login")),
+            action = Navigate.ResetStack(route = Route.Remote(url = "/login")),
             nameIcon = EXIT,
             displayView = Display.NONE
     ).build()

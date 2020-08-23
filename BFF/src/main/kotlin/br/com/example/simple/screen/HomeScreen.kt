@@ -6,6 +6,7 @@ import br.com.example.simple.compose.ServicesBannerTemplate
 import br.com.example.simple.constants.*
 import br.com.zup.beagle.builder.widget.size
 import br.com.zup.beagle.core.CornerRadius
+import br.com.zup.beagle.core.Display
 import br.com.zup.beagle.core.ServerDrivenComponent
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle

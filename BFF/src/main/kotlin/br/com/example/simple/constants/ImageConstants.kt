@@ -18,5 +18,6 @@ const val LOJA = "MinhaLoja"
 const val PUBLICACOES = "Publicacoes"
 const val DICAS = "Dicas"
 const val MAIS = "Mais"
+const val EDITAR = "Editar"
 
 

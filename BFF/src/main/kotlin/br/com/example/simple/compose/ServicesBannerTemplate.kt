@@ -49,7 +49,7 @@ class ServicesBannerTemplate (
                                 child = Image(path = ImagePath.Local.justMobile("whatsapp")).applyStyle(style = Style(
                                         size = Size(height = 35.unitReal(), width = 35.unitReal()),
                                         positionType = PositionType.ABSOLUTE,
-                                        position = EdgeValue(bottom = 5.unitReal(), right = 5.unitReal())))),
+                                        position = EdgeValue(bottom = 5.unitReal(), right = 5.unitReal()))))
                 )).applyStyle(
                         style = Style(
                                 margin = EdgeValue(left = 10.unitReal()),

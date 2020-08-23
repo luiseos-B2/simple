@@ -1,9 +1,7 @@
 package br.com.example.simple.compose
 
 import br.com.example.simple.constants.*
-import br.com.zup.beagle.core.CornerRadius
-import br.com.zup.beagle.core.ServerDrivenComponent
-import br.com.zup.beagle.core.Style
+import br.com.zup.beagle.core.*
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
