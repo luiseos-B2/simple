@@ -23,15 +23,15 @@ jobs:
         run: mvn clean verify
       - name: login to heroku container registry
         env:
-          HEORKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         run: heroku container:login
       - name: build and push
         env:
-          HEORKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         working-directory: BFF
         run: heroku container:push -a simple-hacka web
       - name: release
         env:
-          HEORKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
         working-directory: BFF
         run: heroku container:release -a simple-hacka web
