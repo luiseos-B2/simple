@@ -79,6 +79,18 @@ class OnboardingScreen : ScreenBuilder {
             displayButton = Display.FLEX
     )
 
+    private val page4 = createPage(
+            text = "Se você possui uma loja e ainda não possui um instagram para a sua loja, indicamos fortemente que você crie um!\n " +
+                    "O Instagram com uma conta comercial abre um leque de ferramentas estratégicas, " +
+                    "em que é possível verificar informações como localização, faixa etária e gênero de seu público." +
+                    "E um perfil comercial ainda permite patrocinar posts e aumentar a visibilidade de sua marca.\n" + "\n",
+            firstImage = MARKETING,
+            secondImage = VENDAS,
+            nameButton = "Proximo",
+            actionButton = Navigate.PushView(route = Route.Remote(url = "/login")),
+            displayButton = Display.FLEX
+    )
+
     private val pageView = PageView(
             children = listOf(
                     page1,

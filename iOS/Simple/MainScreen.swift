@@ -18,7 +18,6 @@ struct MainScreen {
     }
 }
 
-
 class Main: UIViewController {
     private lazy var previewButton: UIButton = {
         let button = UIButton()
