@@ -38,7 +38,7 @@ class AppBeagleActivity : BeagleActivity() {
         }
     }
 
-    private fun buttonRetry(state: ServerDrivenState.Error){
+    private fun buttonRetry(state: ServerDrivenState.Error) {
         mButton.visibility = View.VISIBLE
         mButton.setOnClickListener {
             state.retry()

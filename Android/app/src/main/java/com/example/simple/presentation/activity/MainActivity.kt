@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.zup.beagle.android.view.BeagleActivity
 import br.com.zup.beagle.android.view.ScreenRequest
 import com.example.simple.R
+import com.example.simple.constants.ONBOARDING_PATH
+
+const val ONE_SECOND_MILLIS = 1000L
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,9 +17,9 @@ class MainActivity : AppCompatActivity() {
         timeSplash()
     }
 
-    private fun timeSplash(){
+    private fun timeSplash() {
         Handler().postDelayed({
-            startActivity(BeagleActivity.newIntent(this, ScreenRequest("/onboarding")))
-        }, 1000)
+            startActivity(BeagleActivity.newIntent(this, ScreenRequest(ONBOARDING_PATH)))
+        }, ONE_SECOND_MILLIS)
     }
 }

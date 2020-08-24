@@ -11,29 +11,31 @@ import com.example.simple.R
 import com.example.simple.utils.SingletonSave
 import java.io.FileNotFoundException
 
+const val IMAGE_TYPE = "image/*"
+const val GALLERY_REQUEST = 123
 
 class GalleryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
         val photoPickerIntent = Intent(Intent.ACTION_PICK)
-        photoPickerIntent.type = "image/*"
-        startActivityForResult(photoPickerIntent, 123)
+        photoPickerIntent.type = IMAGE_TYPE
+        startActivityForResult(photoPickerIntent, GALLERY_REQUEST)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode === Activity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
             try {
                 val imageUri: Uri? = data?.data
                 SingletonSave.image = imageUri
                 finish()
             } catch (e: FileNotFoundException) {
                 e.printStackTrace()
-                Toast.makeText(this@GalleryActivity, "Something went wrong", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@GalleryActivity, getString(R.string.message_error_gallery), Toast.LENGTH_LONG).show()
             }
         } else {
-            Toast.makeText(this@GalleryActivity, "You haven't picked Image", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@GalleryActivity, getString(R.string.message_have_not_picked_image_gallery), Toast.LENGTH_LONG).show()
         }
     }
 }

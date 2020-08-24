@@ -4,4 +4,32 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="publish_not_found">Essa publicação não foi encontrada</string>
+    <string name="message_error_gallery">Algo deu errado</string>
+    <string name="message_have_not_picked_image_gallery">Você não escolheu uma imagem</string>
+    <string name="choose_a_option">Escolha a opção!</string>
+    <string name="camera">Câmera</string>
+    <string name="gallery">Galeria</string>
+    <string name="opportunity_title">Oportunidades</string>
+    <string name="product_title">Produtos</string>
+    <string name="store_title">Lojas</string>
+    <string name="service_title">Serviços</string>
+    <string name="input_opportunity">oportunidade</string>
+    <string name="input_product">produto</string>
+    <string name="input_store">loja</string>
+    <string name="input_service">serviço</string>
+    <string name="take_a_picture">Tirar foto</string>
+    <string name="welcome_app">Bem-vindo ao Simple App</string>
+    <string name="create_post">Criar Post</string>
+    <string name="create_your_post">Publique seu anúncio</string>
+    <string name="service_button">Serviço</string>
+    <string name="opportunity_button">Oportunidade</string>
+    <string name="title_hint">Título</string>
+    <string name="description">Descrição</string>
+    <string name="post_button">Publicar</string>
+    <string name="phone_hint">Exemplo 34999999999</string>
+    <string name="home_menu">Home</string>
+    <string name="search_menu">Pesquisa</string>
+    <string name="post_menu">Post</string>
+    <string name="profile_menu">Perfil</string>
+    <string name="menu_menu">Menu</string>
 </resources>

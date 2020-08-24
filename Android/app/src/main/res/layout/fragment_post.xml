@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/default_size"
     tools:context=".presentation.fragments.PostFragment">
 
     <TextView
@@ -11,95 +12,108 @@
         style="@style/Style.H1.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Criar Post"
+        android:text="@string/create_post"
         android:textColor="@color/colorBlue"
-        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="@dimen/image_post"
+        android:layout_height="@dimen/image_post"
+        android:layout_marginTop="@dimen/default_size"
+        android:contentDescription="@string/create_your_post"
         android:src="@drawable/ic_foto"
-        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/btn_opportunity"
-        android:layout_width="130dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/shape_button_native"
-        android:text="Serviço"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view" />
-
-    <Button
-        android:id="@+id/btn_service"
-        android:layout_width="130dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="48dp"
-        android:text="Oportunidade"
-        android:background="@drawable/shape_button_native"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.206"
-        app:layout_constraintStart_toEndOf="@+id/btn_opportunity"
-        app:layout_constraintTop_toBottomOf="@+id/image_view" />
-
-    <EditText
-        android:id="@+id/tv_title"
+    <LinearLayout
+        android:id="@+id/layout_buttons"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginHorizontal="25dp"
-        style="@style/Style.TextInput"
-        android:hint="Título"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_size"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_service" />
+        app:layout_constraintTop_toBottomOf="@id/image_view">
 
-    <EditText
-        android:id="@+id/tv_messege"
-        style="@style/Style.TextInput"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        <Button
+            android:id="@+id/btn_opportunity"
+            android:layout_width="@dimen/width_button_post"
+            android:layout_height="@dimen/largest_size"
+            android:layout_marginEnd="@dimen/default_size"
+            android:background="@drawable/shape_button_native"
+            android:text="@string/service_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view"
+            tools:ignore="ButtonStyle" />
 
-    <EditText
-        android:id="@+id/tv_phone"
-        style="@style/Style.TextInput"
+        <Button
+            android:id="@+id/btn_service"
+            android:layout_width="@dimen/width_button_post"
+            android:layout_height="@dimen/largest_size"
+            android:background="@drawable/shape_button_native"
+            android:text="@string/opportunity_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_view"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_inputs"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginHorizontal="25dp"
-        android:hint="Numero EX 34999999999"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_messege" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_post"
+        app:layout_constraintTop_toBottomOf="@+id/layout_buttons">
+
+        <EditText
+            android:id="@+id/tv_title"
+            style="@style/Style.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_size"
+            android:hint="@string/title_hint"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/tv_messege"
+            style="@style/Style.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_edit_text_description_post"
+            android:layout_marginTop="@dimen/default_size"
+            android:gravity="top"
+            android:hint="@string/description"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/tv_phone"
+            style="@style/Style.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_size"
+            android:layout_marginTop="@dimen/default_size"
+            android:hint="@string/phone_hint"
+            android:importantForAutofill="no"
+            android:inputType="phone" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_post"
         style="@style/Style.Border.Blue.System"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="@dimen/default_size"
         android:background="@drawable/shape_button_native"
-        android:text="Oportunidade"
-        android:layout_marginBottom="25dp"
+        android:text="@string/post_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_opportunity" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="largest_size">48dp</dimen>
+    <dimen name="very_large_size">40dp</dimen>
+    <dimen name="large_size">32dp</dimen>
+    <dimen name="default_size">24dp</dimen>
+    <dimen name="short_size">16dp</dimen>
+    <dimen name="semi_short_size">12dp</dimen>
+    <dimen name="little_size">8dp</dimen>
+    <dimen name="tiny_size">4dp</dimen>
+    <dimen name="no_size">0dp</dimen>
+
+    <dimen name="button_capture_camera">100dp</dimen>
+    <dimen name="image_post">120dp</dimen>
+    <dimen name="height_edit_text_description_post">60dp</dimen>
+    <dimen name="width_button_post">130dp</dimen>
+    <dimen name="height_button_post">120dp</dimen>
+
+</resources>

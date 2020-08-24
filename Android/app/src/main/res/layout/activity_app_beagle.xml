@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,18 +21,18 @@
 
         <ProgressBar
             android:id="@+id/progress_bar"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
+            android:layout_width="@dimen/very_large_size"
+            android:layout_height="@dimen/very_large_size"
             android:layout_gravity="center"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/btn_try_again"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorBlue"
             android:text="@string/btn_tentar_novamente"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
     </FrameLayout>
-
 </LinearLayout>

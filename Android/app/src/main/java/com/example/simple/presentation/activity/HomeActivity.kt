@@ -1,6 +1,5 @@
 package com.example.simple.presentation.activity
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -23,31 +22,31 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private val onNavigationItemSelectedListener =
-        BottomNavigationView.OnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.home -> {
-                    goToFragment(HomeFragment.newInstance())
-                    return@OnNavigationItemSelectedListener true
+            BottomNavigationView.OnNavigationItemSelectedListener { item ->
+                when (item.itemId) {
+                    R.id.home -> {
+                        goToFragment(HomeFragment.newInstance())
+                        return@OnNavigationItemSelectedListener true
+                    }
+                    R.id.search -> {
+                        goToFragment(SearchFragment.newInstance())
+                        return@OnNavigationItemSelectedListener true
+                    }
+                    R.id.post -> {
+                        goToFragment(PostFragment.newInstance())
+                        return@OnNavigationItemSelectedListener true
+                    }
+                    R.id.profile -> {
+                        goToFragment(ProfileFragment.newInstance())
+                        return@OnNavigationItemSelectedListener true
+                    }
+                    R.id.menu -> {
+                        goToFragment(MenuFragment.newInstance())
+                        return@OnNavigationItemSelectedListener true
+                    }
                 }
-                R.id.search -> {
-                    goToFragment(SearchFragment.newInstance())
-                    return@OnNavigationItemSelectedListener true
-                }
-                R.id.post -> {
-                    goToFragment(PostFragment.newInstance())
-                    return@OnNavigationItemSelectedListener true
-                }
-                R.id.profile -> {
-                    goToFragment(ProfileFragment.newInstance())
-                    return@OnNavigationItemSelectedListener true
-                }
-                R.id.menu -> {
-                    goToFragment(MenuFragment.newInstance())
-                    return@OnNavigationItemSelectedListener true
-                }
+                false
             }
-            false
-        }
 
     private fun goToFragment(fragment: Fragment) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()

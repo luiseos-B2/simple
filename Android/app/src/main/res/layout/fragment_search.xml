@@ -13,8 +13,8 @@
         android:focusableInTouchMode="false"
         android:iconifiedByDefault="true"
         android:inputType="text"
-        android:theme="@style/AppThemeSearch"
         android:queryHint="Pesquisar"
+        android:theme="@style/AppThemeSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,17 +24,17 @@
         style="@style/Style.H1.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/semi_short_size"
+        android:layout_marginTop="@dimen/semi_short_size"
+        android:layout_marginBottom="@dimen/semi_short_size"
         android:textColor="@color/colorBlue"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search_view" />
 
     <FrameLayout
         android:id="@+id/fl_search"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/no_size"
+        android:layout_height="@dimen/no_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

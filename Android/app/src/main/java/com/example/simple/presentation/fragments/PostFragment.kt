@@ -2,9 +2,7 @@ package com.example.simple.presentation.fragments
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,17 +16,15 @@ import kotlinx.android.synthetic.main.fragment_post.*
 
 class PostFragment : Fragment() {
 
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_post, container, false)
 
 
-
     }
+
     @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -38,20 +34,14 @@ class PostFragment : Fragment() {
             alertImage()
         }
 
-        btn_opportunity.setOnClickListener(object : View.OnClickListener{
-            override fun onClick(v: View?) {
-                btn_service.setBackgroundResource(R.color.colorGray)
-                btn_opportunity.setBackgroundResource(R.color.colorBlue)
-            }
-
-        })
-        btn_service.setOnClickListener(object : View.OnClickListener{
-            override fun onClick(v: View?) {
-                btn_opportunity.setBackgroundResource(R.color.colorGray)
-                btn_service.setBackgroundResource(R.color.colorBlue)
-            }
-
-        })
+        btn_opportunity.setOnClickListener {
+            btn_service.setBackgroundResource(R.color.colorGray)
+            btn_opportunity.setBackgroundResource(R.color.colorBlue)
+        }
+        btn_service.setOnClickListener {
+            btn_opportunity.setBackgroundResource(R.color.colorGray)
+            btn_service.setBackgroundResource(R.color.colorBlue)
+        }
     }
 
 
@@ -75,20 +65,18 @@ class PostFragment : Fragment() {
         startActivity(intent)
     }
 
-    fun alertImage(){
+    private fun alertImage() {
         val builder1: AlertDialog.Builder = AlertDialog.Builder(context)
-        builder1.setTitle("Escolha a opção!")
+        builder1.setTitle(getString(R.string.choose_a_option))
         builder1.setPositiveButton(
-            "Câmera",
-            DialogInterface.OnClickListener { dialog, id ->
-                goToCameraActivity()
-            })
+                getString(R.string.camera)) { _, _ ->
+            goToCameraActivity()
+        }
 
         builder1.setNegativeButton(
-            "Galeria",
-            DialogInterface.OnClickListener { dialog, id ->
-                goToGalleryActivity()
-            })
+                getString(R.string.gallery)) { _, _ ->
+            goToGalleryActivity()
+        }
 
         val alert11: AlertDialog = builder1.create()
         alert11.show()

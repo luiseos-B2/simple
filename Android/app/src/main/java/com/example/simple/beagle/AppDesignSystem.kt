@@ -45,7 +45,7 @@ class AppDesignSystem : DesignSystem() {
             BLACK_BANNER -> R.drawable.black_banner
             ORANGE_BANNER -> R.drawable.orange_banner
             YELLOW_BANNER -> R.drawable.yellow_banner
-            BLUE_BANNER  -> R.drawable.blue_banner
+            BLUE_BANNER -> R.drawable.blue_banner
             ORANGE_BANNER2 -> R.drawable.orange_banner2
             DICAS -> R.drawable.ic_profits
             MAIS -> R.drawable.ic_mais
@@ -64,7 +64,7 @@ class AppDesignSystem : DesignSystem() {
     }
 
     override fun textStyle(id: String): Int? {
-        return when(id){
+        return when (id) {
             STYLE_TEXT_BOLD_SYSTEM_20 -> R.style.Style_Text_Bold_System_20
             STYLE_TEXT_SYSTEM_BOLD_12 -> R.style.Style_Text_Bold_System_12
             STYLE_TEXT_NORMAL_SYSTEM_16 -> R.style.Style_Text_Normal_System_16
@@ -76,15 +76,15 @@ class AppDesignSystem : DesignSystem() {
     }
 
     override fun buttonStyle(id: String): Int? {
-        return when(id){
-           STYLE_BUTTON_WHITE_SYSTEM_BOLD_16 -> R.style.Style_Button_White_System_Bold_16
+        return when (id) {
+            STYLE_BUTTON_WHITE_SYSTEM_BOLD_16 -> R.style.Style_Button_White_System_Bold_16
             STYLE_BUTTON_BORDER -> R.style.Style_Border_Blue_System_16
             else -> null
         }
     }
 
     override fun inputTextStyle(id: String): Int? {
-        return when(id){
+        return when (id) {
             STYLE_TEXT_INPUT -> R.style.Style_TextInput
             else -> null
         }

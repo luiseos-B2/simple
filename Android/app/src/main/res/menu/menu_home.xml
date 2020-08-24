@@ -5,25 +5,25 @@
         android:id="@+id/home"
         android:checked="true"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="@string/home_menu" />
 
     <item
         android:id="@+id/search"
         android:icon="@drawable/ic_search"
-        android:title="Pesquisa" />
+        android:title="@string/search_menu" />
 
     <item
         android:id="@+id/post"
         android:icon="@drawable/ic_plus"
-        android:title="Post"/>
+        android:title="@string/post_menu" />
 
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_user"
-        android:title="Perfil"/>
+        android:title="@string/profile_menu" />
 
     <item
         android:id="@+id/menu"
         android:icon="@drawable/ic_menu"
-        android:title="Menu"/>
+        android:title="@string/menu_menu" />
 </menu>
