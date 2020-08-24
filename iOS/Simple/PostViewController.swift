@@ -149,7 +149,7 @@ class PostViewController: UIViewController {
     }()
     
     private lazy var textImputUrlWhats: UITextField = {
-        return createTextField(placeholder: "URL do Whats App")
+        return createTextField(placeholder: "Nemero EX: 34999999999")
     }()
     
     private lazy var buttonCriarPost: UIButton = {

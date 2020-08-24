@@ -53,7 +53,7 @@ class OnboardingScreen : ScreenBuilder {
     )
 
     private val page1 = createPage(
-            text = "Agora já pode usar o aplicativo para procurar prestadores de serviços ou produtos!",
+            text = "Nunca foi tão fácil procurar prestadores de serviços ou produtos!",
             firstImage = PRODUCT,
             secondImage = SERVICE,
             nameButton = "Pular",
@@ -62,7 +62,7 @@ class OnboardingScreen : ScreenBuilder {
     )
 
     private val page2 = createPage(
-            text = "Procurar serviços, oferecer servicos para pessoas do seu bairro!",
+            text = "Ganhe tranquilidade na contratação de serviçõs graças às avaliações de outros usuários!",
             firstImage = ACORDO,
             secondImage = SUPPORT,
             nameButton = "",

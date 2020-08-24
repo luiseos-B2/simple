@@ -75,7 +75,7 @@ class TipsTemplate(val title: String, val text: String, val image: String, val b
             margin: EdgeValue,
             flex: Flex,
             positionType: PositionType,
-            displayImage: Display = Display.FLEX,
+            displayImage: Display = Display.FLEX
     ) = Image(
             ImagePath.Remote(remoteUrl = name)
     ).applyStyle(

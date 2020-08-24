@@ -8,6 +8,7 @@ import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
+import br.com.zup.beagle.widget.action.Alert
 import br.com.zup.beagle.widget.action.Navigate
 import br.com.zup.beagle.widget.action.Route
 import br.com.zup.beagle.widget.core.*
@@ -34,15 +35,20 @@ object ProfileScreen: ScreenBuilder {
         )
     }
 
+    private val alert = Alert(
+            title = "Atenção",
+            message = "Tela não criada!"
+    )
+
     private val userInfoContainer = Container(children =
         listOf(
                 Text(text = "Gabriela Coelho", styleId = STYLE_TEXT_H1, textColor = BLUE, alignment = TextAlignment.LEFT),
-                Text(text = "gabrielacoelho@gmail.com", styleId = STYLE_TEXT_SYSTEM_LIGHT, textColor = BLUE, alignment = TextAlignment.LEFT),
+                Text(text = "gabsworks@gmail.com", styleId = STYLE_TEXT_SYSTEM_LIGHT, textColor = BLUE, alignment = TextAlignment.LEFT),
                 Button(
                         text =  "Editar Perfil",
                         styleId = STYLE_BUTTON_BORDER,
                         onPress = listOf(
-                                Navigate.OpenNativeRoute(route = "")
+                                alert
                         )
                 ).applyStyle(style = Style(
                         size = Size(width = 50.unitPercent(), height = 20.unitPercent()),

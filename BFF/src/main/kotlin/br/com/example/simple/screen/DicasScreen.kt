@@ -1,28 +1,21 @@
 package br.com.example.simple.screen
 
-import br.com.example.simple.compose.PageOnboardingTemplate
 import br.com.example.simple.compose.TipsTemplate
 import br.com.example.simple.constants.*
-import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.Display
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyFlex
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitPercent
-import br.com.zup.beagle.ext.unitReal
-import br.com.zup.beagle.widget.action.Action
-import br.com.zup.beagle.widget.action.Navigate
-import br.com.zup.beagle.widget.action.Route
 import br.com.zup.beagle.widget.action.SetContext
 import br.com.zup.beagle.widget.context.ContextData
 import br.com.zup.beagle.widget.context.expressionOf
 import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.*
 import br.com.zup.beagle.widget.pager.PageIndicator
-import br.com.zup.beagle.widget.ui.Button
 import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.ImagePath
-import br.com.zup.beagle.widget.ui.Text
+
 
 object DicasScreen: ScreenBuilder {
     private val flexGrow = Flex(grow = 1.0)
@@ -58,7 +51,7 @@ object DicasScreen: ScreenBuilder {
                     "em que é possível verificar informações como localização, faixa etária e gênero de seu público." +
                     "\nUm perfil comercial ainda permite patrocinar posts e aumentar a visibilidade de sua marca.\n" + "\n",
             image = "https://blog.mxcursos.com/wp-content/uploads/2018/11/a-importancia-do-instagram-no-marketing-digital-e-5-dicas-para-se-destacar-nesta-rede_social.png",
-            title = "Olá João!"
+            title = "Olá, Gabriela!"
     )
 
     private val page2 = createPage(
@@ -115,7 +108,7 @@ object DicasScreen: ScreenBuilder {
                             displayButton = displayButton,
                             displayImage = displayImage,
                             buttonText = buttonText
-                    ).build(),
+                    ).build()
             )
     ).applyFlex(flexGrow)
 }

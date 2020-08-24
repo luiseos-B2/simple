@@ -7,6 +7,7 @@ import br.com.zup.beagle.core.Display
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitReal
+import br.com.zup.beagle.widget.action.Alert
 import br.com.zup.beagle.widget.action.Navigate
 import br.com.zup.beagle.widget.action.Route
 import br.com.zup.beagle.widget.core.*
@@ -42,6 +43,11 @@ object MoreScreen: ScreenBuilder {
             )
     )
 
+    val alert = Alert(
+            title = "Atenção",
+            message = "Tela não criada!"
+    )
+
     private val buttonDicas = ButtonDefaultCompose(
             textButton = "Dicas de Negócios",
             action = Navigate.PushStack(route = Route.Remote(url = "/dicas")),
@@ -51,7 +57,7 @@ object MoreScreen: ScreenBuilder {
 
     private val buttonPolicyPrivacy = ButtonDefaultCompose(
             textButton = "Política de Privacidade",
-            action = Navigate.PushStack(route = Route.Remote(url = "/policy")),
+            action = alert,
             nameIcon = POLICY,
             displayView = Display.FLEX
     ).build()
@@ -65,7 +71,7 @@ object MoreScreen: ScreenBuilder {
 
     private val buttonLegalInformation = ButtonDefaultCompose(
             textButton = "Informações Legais",
-            action = Navigate.PushStack(route = Route.Remote(url = "/information")),
+            action = alert,
             nameIcon = INFORMATION,
             displayView = Display.FLEX
     ).build()
