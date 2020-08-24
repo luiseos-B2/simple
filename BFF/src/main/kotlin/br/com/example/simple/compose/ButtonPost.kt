@@ -43,11 +43,11 @@ class ButtonPost(val text: String, val showWhatsAppIcon: Display, val action: Ac
                                                     Style(
                                                             flex = Flex(alignSelf = AlignSelf.CENTER)
                                                     )
-                                            ),
+                                            )
                                     )
                             ).applyStyle(Style(backgroundColor = BLUE,
                                     size = Size(width = 70.unitPercent(), height = 40.unitReal()),
-                                    cornerRadius = CornerRadius(radius = 30.0),
+                                    cornerRadius = CornerRadius(radius = 15.0),
                                     flex = Flex(
                                             flexDirection = FlexDirection.ROW,
                                             justifyContent = JustifyContent.SPACE_AROUND,

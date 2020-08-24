@@ -64,7 +64,7 @@ class PostsCardTemplate(
                         children = listOf(
                                 Image(path = ImagePath.Remote(imageUrl))
                                         .applyStyle(style = Style(
-                                                size = Size(width = 100.unitPercent(), 300.unitReal()),
+                                                size = Size(width = 100.unitPercent(), height = 300.unitReal()),
                                                 flex = Flex(
                                                         alignSelf = AlignSelf.CENTER
                                                 )
