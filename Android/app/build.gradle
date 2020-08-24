@@ -9,13 +9,23 @@ android {
 
     defaultConfig {
         applicationId "com.example.simple"
-        minSdkVersion 19
+        minSdkVersion 22
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
 
     buildTypes {
         release {
@@ -26,6 +36,7 @@ android {
 }
 
 ext.beagle_version = "1.1.1"
+def camerax_version = "1.0.0-beta07"
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -44,5 +55,12 @@ dependencies {
     kapt "br.com.zup.beagle:android-processor:$beagle_version"
 
     debugImplementation "br.com.zup.beagle:android-preview:$beagle_version"
+
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    implementation"androidx.camera:camera-view:1.0.0-alpha15"
+    implementation "androidx.camera:camera-extensions:1.0.0-alpha15"
+
+    implementation 'com.karumi:dexter:6.2.1'
 
 }

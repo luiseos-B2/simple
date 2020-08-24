@@ -42,6 +42,21 @@
         <item name="background">@drawable/text_input_background</item>
     </style>
 
+    <style name="Style.Border.Blue.System" parent="Widget.AppCompat.Button">
+        <item name="fontWeight">600</item>
+        <item name="cornerRadius">40dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+        <item name="background">@drawable/shape_button_native</item>
+    </style>
+
+    <style name="Style.Take.Photo" parent="Widget.AppCompat.Button">
+        <item name="fontWeight">600</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+        <item name="backgroundTint">@color/colorBlue</item>
+    </style>
+
     <style name="Style.Text.Normal.System.16" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/colorBlue</item>
         <item name="android:textSize">16sp</item>
