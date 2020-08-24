@@ -35,30 +35,36 @@ class SearchFragment : Fragment() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                title.visibility = View.GONE
                 text_not_found.visibility = View.GONE
                 if (!newText.isNullOrBlank()) {
                     when {
                         newText.contains(getString(R.string.input_opportunity)) -> {
                             title.text = getString(R.string.opportunity_title)
                             openScreen(OPPORTUNITY_PATH)
+                            title.visibility = View.VISIBLE
                         }
                         newText.contains(getString(R.string.input_product)) -> {
                             title.text = getString(R.string.product_title)
                             openScreen(PRODUCT_PATH)
+                            title.visibility = View.VISIBLE
                         }
                         newText.contains(getString(R.string.input_store)) -> {
                             title.text = getString(R.string.store_title)
                             openScreen(STORE_PATH)
+                            title.visibility = View.VISIBLE
                         }
                         newText.contains(getString(R.string.input_service)) -> {
                             title.text = getString(R.string.service_title)
                             openScreen(SERVICE_PATH)
+                            title.visibility = View.VISIBLE
                         }
                         else -> {
                             text_not_found.visibility = View.VISIBLE
+                            title.visibility = View.GONE
+                            fl_search.visibility = View.GONE
                         }
                     }
+
                 }
                 return false
             }
@@ -86,6 +92,7 @@ class SearchFragment : Fragment() {
                     }
 
                 })
+        fl_search.visibility = View.VISIBLE
     }
 
     companion object {
