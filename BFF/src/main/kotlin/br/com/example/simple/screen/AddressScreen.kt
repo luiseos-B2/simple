@@ -159,7 +159,7 @@ object AddressScreen : ScreenBuilder {
                                     Alert(
                                             title = "Sucesso!",
                                             message = "Cadastro realizado com sucesso!",
-                                            onPressOk = Navigate.OpenNativeRoute(route = "home")
+                                            onPressOk = Navigate.ResetStack(route = Route.Remote(url = "/login"))
                                     ),
                                     SetContext(
                                             contextId = "address",

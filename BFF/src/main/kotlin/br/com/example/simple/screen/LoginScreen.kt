@@ -1,7 +1,6 @@
 package br.com.example.simple.screen
 
 import br.com.example.simple.constants.*
-import br.com.example.simple.constants.BLUE
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyFlex
@@ -16,35 +15,31 @@ import br.com.zup.beagle.widget.layout.Screen
 import br.com.zup.beagle.widget.layout.ScreenBuilder
 import br.com.zup.beagle.widget.navigation.Touchable
 import br.com.zup.beagle.widget.ui.*
-import br.com.zup.beagle.widget.ui.Button
-import br.com.zup.beagle.widget.ui.Image
-import br.com.zup.beagle.widget.ui.ImagePath
-import br.com.zup.beagle.widget.ui.TextInput
 
-class LoginScreen: ScreenBuilder {
+class LoginScreen : ScreenBuilder {
 
     override fun build(): Screen {
         return Screen(child = Container(
                 children = listOf(
-                    image,
-                    emailTextInput,
-                    passwordTextInput,
-                    passwordButton,
-                    containerButton
+                        image,
+                        emailTextInput,
+                        passwordTextInput,
+                        passwordButton,
+                        containerButton
                 )
-            ).applyStyle(Style(
-                    flex = Flex(alignItems = AlignItems.CENTER,
-                                justifyContent = JustifyContent.CENTER,
-                                grow = 1.0)
-                )
-            )
+        ).applyStyle(Style(
+                flex = Flex(alignItems = AlignItems.CENTER,
+                        justifyContent = JustifyContent.CENTER,
+                        grow = 1.0)
+        )
+        )
         )
     }
 
     private val image = Image(path = ImagePath.Local.justMobile(LOGO))
             .applyStyle(Style(
                     size = Size(width = 250.unitReal(), height = 150.unitReal())
-                )
+            )
             )
 
     private val emailTextInput = TextInput(
@@ -55,7 +50,7 @@ class LoginScreen: ScreenBuilder {
     ).applyStyle(style = Style(
             size = Size(width = 85.unitPercent(), height = 5.unitPercent()),
             margin = EdgeValue(top = 50.unitReal())
-        )
+    )
     )
 
     private val passwordTextInput = TextInput(
@@ -66,7 +61,7 @@ class LoginScreen: ScreenBuilder {
     ).applyStyle(style = Style(
             size = Size(width = 85.unitPercent(), height = 5.unitPercent()),
             margin = EdgeValue(top = 20.unitReal())
-        )
+    )
     )
 
     private val passwordButton = Container(
@@ -86,13 +81,13 @@ class LoginScreen: ScreenBuilder {
             )
     ).applyStyle(
             Style(
-                    margin = EdgeValue( top = 10.unitReal()),
+                    margin = EdgeValue(top = 10.unitReal()),
                     size = Size(width = 85.unitPercent(), height = 5.unitPercent())
             )
     )
 
     private val loginButton = Button(
-            text =  "Entrar",
+            text = "Entrar",
             styleId = STYLE_BUTTON_WHITE_SYSTEM_BOLD_16,
             onPress = listOf(
                     Navigate.OpenNativeRoute(route = "home")
@@ -102,21 +97,22 @@ class LoginScreen: ScreenBuilder {
             cornerRadius = CornerRadius(radius = 10.0),
             flex = Flex(alignSelf = AlignSelf.CENTER),
             backgroundColor = BLUE
-        )
+    )
     )
 
     private val signUpButton = Button(
-            text =  "Cadastrar",
+            text = "Cadastrar",
             styleId = STYLE_BUTTON_WHITE_SYSTEM_BOLD_16,
             onPress = listOf(
                     Navigate.PushView(route = Route.Remote(url = "/register"))
             )
     ).applyStyle(style = Style(
             size = Size(width = 65.unitPercent(), height = 15.unitPercent()),
+            margin = EdgeValue(all = 10.unitReal()),
             cornerRadius = CornerRadius(radius = 10.0),
             flex = Flex(alignSelf = AlignSelf.CENTER),
             backgroundColor = BLUE
-        )
+    )
     )
 
     private val containerButton = Container(
@@ -127,7 +123,7 @@ class LoginScreen: ScreenBuilder {
     ).applyStyle(style = Style(
             margin = EdgeValue(top = 50.unitReal()),
             size = Size(width = 100.unitPercent(), height = 30.unitPercent()),
-            flex = Flex(justifyContent = JustifyContent.SPACE_BETWEEN)
-        )
+            flex = Flex(justifyContent = JustifyContent.SPACE_BETWEEN, grow = 1.0)
+    )
     )
 }

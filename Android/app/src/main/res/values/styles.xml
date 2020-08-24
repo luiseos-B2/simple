@@ -29,6 +29,16 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="Style.Text.Bold.System.12" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Style.Text.Bold.System.16" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="Style.Button.White.System.Bold.16" parent="Widget.AppCompat.Button">
         <item name="fontWeight">600</item>
         <item name="android:textColor">@color/colorWhite</item>
@@ -66,7 +76,6 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">30sp</item>
     </style>
-
 
     <style name="Style.Text.System.Light" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">15sp</item>

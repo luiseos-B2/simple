@@ -44,7 +44,7 @@ class ServicesBannerTemplate (
                         ),
                         Touchable(
                                 onPress = listOf(
-                                        Navigate.OpenExternalURL(url = "https://www.whatsapp.com")
+                                        Navigate.OpenExternalURL(url = "https://api.whatsapp.com/send?phone=5534999999999&text=Simple")
                                 ),
                                 child = Image(path = ImagePath.Local.justMobile("whatsapp")).applyStyle(style = Style(
                                         size = Size(height = 35.unitReal(), width = 35.unitReal()),

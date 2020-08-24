@@ -79,6 +79,7 @@ class PostViewController: UIViewController {
         imagem.isHidden = true
         let gesto = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
         imagem.addGestureRecognizer(gesto)
+        imagem.isUserInteractionEnabled = true
         imagem.layer.borderColor = #colorLiteral(red: 0.1333333333, green: 0.5058823529, blue: 0.6705882353, alpha: 1)
         imagem.layer.borderWidth = 1
         imagem.layer.cornerRadius = 8
@@ -132,16 +133,23 @@ class PostViewController: UIViewController {
            return viewButtonType
        }()
     
-    private lazy var textImputTitle: UITextField = {
+    private lazy var textInputTitle: UITextField = {
         return createTextField(placeholder: "Título")
     }()
     
-    private lazy var textImputDescricao: UITextField = {
-           return createTextField(placeholder: "Descrição")
-       }()
+    private lazy var textViewDescription: UITextView = {
+        let textView = UITextView()
+        textView.font = .systemFont(ofSize: 20)
+        textView.textColor = .lightGray
+        textView.layer.borderWidth = 1
+        textView.layer.borderColor = #colorLiteral(red: 0.1333333333, green: 0.5058823529, blue: 0.6705882353, alpha: 1)
+        textView.layer.cornerRadius = 10
+        textView.isUserInteractionEnabled = true
+        return textView
+    }()
     
     private lazy var textImputUrlWhats: UITextField = {
-        return createTextField(placeholder: "URL do Whats App")
+        return createTextField(placeholder: "Nemero EX: 34999999999")
     }()
     
     private lazy var buttonCriarPost: UIButton = {
@@ -155,20 +163,22 @@ class PostViewController: UIViewController {
     }()
     
     func setupTextInput() {
-        textImputTitle.translatesAutoresizingMaskIntoConstraints = false
-        let topTextFieldSearch = textImputTitle.topAnchor.constraint(equalTo: viewButtonType.bottomAnchor, constant: 30)
-        let leadingTextFieldSearch = textImputTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
-        let trailingTextFieldSearch = textImputTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-20)
+        textInputTitle.translatesAutoresizingMaskIntoConstraints = false
+        let topTextFieldSearch = textInputTitle.topAnchor.constraint(equalTo: viewButtonType.bottomAnchor, constant: 30)
+        let leadingTextFieldSearch = textInputTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+        let trailingTextFieldSearch = textInputTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-20)
         NSLayoutConstraint.activate([topTextFieldSearch, leadingTextFieldSearch, trailingTextFieldSearch])
         
-        textImputDescricao.translatesAutoresizingMaskIntoConstraints = false
-        let topTextImputDescricao = textImputDescricao.topAnchor.constraint(equalTo: textImputTitle.bottomAnchor, constant: 15)
-        let leadingTextImputDescricao = textImputDescricao.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
-        let trailingTextImputDescricao = textImputDescricao.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-20)
-        NSLayoutConstraint.activate([topTextImputDescricao, leadingTextImputDescricao, trailingTextImputDescricao])
+        textViewDescription.translatesAutoresizingMaskIntoConstraints = false
+        let topTextImputDescricao = textViewDescription.topAnchor.constraint(equalTo: textInputTitle.bottomAnchor, constant: 15)
+        let leadingTextImputDescricao = textViewDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+        let trailingTextImputDescricao = textViewDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-20)
+        let heightTextImputDescricao = textViewDescription.heightAnchor.constraint(equalToConstant: view.frame.height / 10)
+
+        NSLayoutConstraint.activate([topTextImputDescricao, leadingTextImputDescricao, trailingTextImputDescricao, heightTextImputDescricao])
         
         textImputUrlWhats.translatesAutoresizingMaskIntoConstraints = false
-        let topTextImputUrlWhats = textImputUrlWhats.topAnchor.constraint(equalTo: textImputDescricao.bottomAnchor, constant: 15)
+        let topTextImputUrlWhats = textImputUrlWhats.topAnchor.constraint(equalTo: textViewDescription.bottomAnchor, constant: 15)
         let leadingImputUrlWhats = textImputUrlWhats.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
         let trailingImputUrlWhats = textImputUrlWhats.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-20)
         NSLayoutConstraint.activate([topTextImputUrlWhats, leadingImputUrlWhats, trailingImputUrlWhats])
@@ -178,8 +188,6 @@ class PostViewController: UIViewController {
         let trailingCriarPost = buttonCriarPost.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-20)
         let bottomCriarPost = buttonCriarPost.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
         NSLayoutConstraint.activate([leadingCriarPost, trailingCriarPost, bottomCriarPost])
-        
-        
     }
     
     func buttonType() {
@@ -214,8 +222,8 @@ class PostViewController: UIViewController {
         viewImage.translatesAutoresizingMaskIntoConstraints = false
         let topViewImage = viewImage.topAnchor.constraint(equalTo: titleLabel.bottomAnchor , constant: 20)
         let centerViewImage = viewImage.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let widthViewImage = viewImage.widthAnchor.constraint(equalToConstant: 150)
-        let heighthViewImage = viewImage.heightAnchor.constraint(equalToConstant: 150)
+        let widthViewImage = viewImage.widthAnchor.constraint(equalToConstant: view.frame.width / 2)
+        let heighthViewImage = viewImage.heightAnchor.constraint(equalToConstant: view.frame.height / 5)
         NSLayoutConstraint.activate([topViewImage, centerViewImage, widthViewImage,heighthViewImage])
         
         adicionarImage.translatesAutoresizingMaskIntoConstraints = false
@@ -228,8 +236,8 @@ class PostViewController: UIViewController {
         imagem.translatesAutoresizingMaskIntoConstraints = false
         let topImagem = imagem.topAnchor.constraint(equalTo: titleLabel.bottomAnchor , constant: 20)
         let centerImagem = imagem.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let widthImagem = imagem.widthAnchor.constraint(equalToConstant: 150)
-        let heighthImagem = imagem.heightAnchor.constraint(equalToConstant: 150)
+        let widthImagem = imagem.widthAnchor.constraint(equalToConstant: view.frame.width / 2)
+        let heighthImagem = imagem.heightAnchor.constraint(equalToConstant: view.frame.height / 5)
         NSLayoutConstraint.activate([topImagem, centerImagem, widthImagem,heighthImagem])
     }
     
@@ -243,8 +251,8 @@ extension PostViewController: ViewLayoutHelper {
         view.addSubview(viewButtonType)
         viewButtonType.addSubview(buttonServico)
         viewButtonType.addSubview(buttonOportunidade)
-        view.addSubview(textImputTitle)
-        view.addSubview(textImputDescricao)
+        view.addSubview(textInputTitle)
+        view.addSubview(textViewDescription)
         view.addSubview(textImputUrlWhats)
         view.addSubview(buttonCriarPost)
     }

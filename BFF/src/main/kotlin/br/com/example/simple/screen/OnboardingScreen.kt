@@ -53,7 +53,7 @@ class OnboardingScreen : ScreenBuilder {
     )
 
     private val page1 = createPage(
-            text = "Agora já pode usar o aplicativo para procurar prestadores de serviços ou produtos!",
+            text = "Nunca foi tão fácil procurar prestadores de serviços ou produtos!",
             firstImage = PRODUCT,
             secondImage = SERVICE,
             nameButton = "Pular",
@@ -62,7 +62,7 @@ class OnboardingScreen : ScreenBuilder {
     )
 
     private val page2 = createPage(
-            text = "Procurar serviços, oferecer servicos para pessoas do seu bairro!",
+            text = "Ganhe tranquilidade na contratação de serviçõs graças às avaliações de outros usuários!",
             firstImage = ACORDO,
             secondImage = SUPPORT,
             nameButton = "",
@@ -79,18 +79,6 @@ class OnboardingScreen : ScreenBuilder {
             displayButton = Display.FLEX
     )
 
-    private val page4 = createPage(
-            text = "Se você possui uma loja e ainda não possui um instagram para a sua loja, indicamos fortemente que você crie um!\n " +
-                    "O Instagram com uma conta comercial abre um leque de ferramentas estratégicas, " +
-                    "em que é possível verificar informações como localização, faixa etária e gênero de seu público." +
-                    "E um perfil comercial ainda permite patrocinar posts e aumentar a visibilidade de sua marca.\n" + "\n",
-            firstImage = MARKETING,
-            secondImage = VENDAS,
-            nameButton = "Proximo",
-            actionButton = Navigate.PushView(route = Route.Remote(url = "/login")),
-            displayButton = Display.FLEX
-    )
-
     private val pageView = PageView(
             children = listOf(
                     page1,
@@ -100,7 +88,6 @@ class OnboardingScreen : ScreenBuilder {
             onPageChange = listOf(SetContext("numberPage", "@{onPageChange}")),
             currentPage = expressionOf("@{numberPage}")
     )
-
 
     private val pageIndicator = PageIndicator(
             numberOfPages = 3,
