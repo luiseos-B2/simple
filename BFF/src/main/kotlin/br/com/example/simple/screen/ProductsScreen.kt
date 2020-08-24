@@ -1,26 +1,25 @@
 package br.com.example.simple.screen
 
-import br.com.example.simple.compose.ProductCardTemplate
 import br.com.example.simple.compose.ProductEditCardTemplate
 import br.com.example.simple.constants.LIGHT_BACKGROUND
 import br.com.example.simple.constants.MAIS
 import br.com.example.simple.constants.STYLE_NAVIGATION_BAR
-import br.com.zup.beagle.core.Display
 import br.com.zup.beagle.core.Style
-import br.com.zup.beagle.widget.action.Navigate
-import br.com.zup.beagle.widget.action.Route
+import br.com.zup.beagle.widget.action.Alert
 import br.com.zup.beagle.widget.layout.*
 import br.com.zup.beagle.widget.ui.ImagePath
-import br.com.zup.beagle.widget.ui.Text
 
 object ProductsScreen: ScreenBuilder {
 
     val navigationBarItem = NavigationBarItem(
             text = "",
             image = ImagePath.Local.justMobile(MAIS),
-            action = Navigate.PushView(route = Route.Remote(url = "/adicionarProducs"))
-
+            action =  Alert(
+                    title = "Atenção",
+                    message = "Tela não criada!"
+            )
     )
+
     override fun build(): Screen {
         return Screen(
                 style = Style(backgroundColor = LIGHT_BACKGROUND),

@@ -86,4 +86,14 @@
         <item name="android:background">@drawable/text_input_background</item>
     </style>
 
+    <style name="SearchAutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="AppThemeSearch" parent="Theme.AppCompat.Light">
+        ...
+        <item name="autoCompleteTextViewStyle">@style/SearchAutoCompleteTextView</item>
+    </style>
+
+
 </resources>

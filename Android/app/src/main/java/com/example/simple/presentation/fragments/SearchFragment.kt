@@ -1,9 +1,11 @@
 package com.example.simple.presentation.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import br.com.zup.beagle.android.utils.loadView
