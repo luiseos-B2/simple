@@ -3,15 +3,14 @@ package br.com.example.simple.screen
 import br.com.example.simple.action.OpenWhatsApp
 import br.com.example.simple.compose.ButtonPost
 import br.com.example.simple.compose.PostsCardTemplate
+import br.com.example.simple.constants.STYLE_NAVIGATION_BAR
 import br.com.zup.beagle.core.Display
-import br.com.zup.beagle.widget.layout.Container
-import br.com.zup.beagle.widget.layout.Screen
-import br.com.zup.beagle.widget.layout.ScreenBuilder
-import br.com.zup.beagle.widget.layout.ScrollView
+import br.com.zup.beagle.widget.layout.*
 
 class SearchOpportunityScreen : ScreenBuilder {
 
     override fun build() = Screen(
+            navigationBar = NavigationBar(title = "Oportunidades", styleId = STYLE_NAVIGATION_BAR),
             child = ScrollView(
                     children = listOf(
                             Container(

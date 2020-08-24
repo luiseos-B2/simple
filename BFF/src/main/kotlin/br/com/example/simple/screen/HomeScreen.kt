@@ -90,10 +90,10 @@ object HomeScreen : ScreenBuilder {
 
     private val categoriesList = Container(
             children = listOf(
-                    CategoryTemplate(text = "Produtos", image = "productsicon", "/product"),
-                    CategoryTemplate(text = "Lojas", image = "shop","/store"),
-                    CategoryTemplate(text = "Serviços", image = "services", "/service"),
-                    CategoryTemplate(text = "Oportunidade", image = "opportunity1", "/opportunity")
+                    CategoryTemplate(text = "Produtos", image = "productsicon", url = "/product"),
+                    CategoryTemplate(text = "Lojas", image = "shop", url = "/store"),
+                    CategoryTemplate(text = "Serviços", image = "services", url = "/service"),
+                    CategoryTemplate(text = "Oportunidade", image = "opportunity1", url = "/opportunity")
             )
     ).applyStyle(style = Style(
             flex = Flex(flexDirection = FlexDirection.ROW),

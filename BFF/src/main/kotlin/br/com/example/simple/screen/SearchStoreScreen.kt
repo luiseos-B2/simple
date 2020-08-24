@@ -2,17 +2,16 @@ package br.com.example.simple.screen
 
 import br.com.example.simple.compose.ButtonPost
 import br.com.example.simple.compose.PostsCardTemplate
+import br.com.example.simple.constants.STYLE_NAVIGATION_BAR
 import br.com.zup.beagle.core.Display
 import br.com.zup.beagle.widget.action.Navigate
 import br.com.zup.beagle.widget.action.Route
-import br.com.zup.beagle.widget.layout.Container
-import br.com.zup.beagle.widget.layout.Screen
-import br.com.zup.beagle.widget.layout.ScreenBuilder
-import br.com.zup.beagle.widget.layout.ScrollView
+import br.com.zup.beagle.widget.layout.*
 
 class SearchStoreScreen : ScreenBuilder {
 
     override fun build() = Screen(
+            navigationBar = NavigationBar(title = "Lojas", styleId = STYLE_NAVIGATION_BAR),
             child = ScrollView(
                     children = listOf(
                             Container(

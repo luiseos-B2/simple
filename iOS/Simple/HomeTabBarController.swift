@@ -68,7 +68,7 @@ extension HomeTabBarController {
     }
         
     static func makeSearchViewController() -> UIViewController {
-        let controller = UIViewController()
+        let controller = SearchBarController()
         controller.tabBarItem = UITabBarItem(
             title: "Search",
             image: UIImage(named: "search"),

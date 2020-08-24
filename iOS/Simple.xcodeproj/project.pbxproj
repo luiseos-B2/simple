@@ -13,6 +13,7 @@
 		6E87FC9C24F2077B008A247B /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E87FC9B24F2077B008A247B /* EscolherImagem.swift */; };
 		6E87FC9E24F207F6008A247B /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E87FC9D24F207F6008A247B /* PostViewController.swift */; };
 		6E87FCA124F2183C008A247B /* ProtocolViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E87FCA024F2183C008A247B /* ProtocolViewCode.swift */; };
+		9801364424F3420700E8E8CA /* SearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801364324F3420700E8E8CA /* SearchBarController.swift */; };
 		98F3D41F24EDC803006DAB05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3D41E24EDC803006DAB05 /* AppDelegate.swift */; };
 		98F3D42324EDC803006DAB05 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F3D42224EDC803006DAB05 /* MainScreen.swift */; };
 		98F3D42824EDC807006DAB05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F3D42724EDC807006DAB05 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		6E87FC9B24F2077B008A247B /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
 		6E87FC9D24F207F6008A247B /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		6E87FCA024F2183C008A247B /* ProtocolViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewCode.swift; sourceTree = "<group>"; };
+		9801364324F3420700E8E8CA /* SearchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarController.swift; sourceTree = "<group>"; };
 		98F3D41B24EDC803006DAB05 /* Simple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F3D41E24EDC803006DAB05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98F3D42224EDC803006DAB05 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				98FF078A24F0B79D00CA9415 /* HomeTabBarController.swift */,
 				98FF078C24F144A500CA9415 /* DeeplinkScreenManager.swift */,
 				6E87FC9D24F207F6008A247B /* PostViewController.swift */,
+				9801364324F3420700E8E8CA /* SearchBarController.swift */,
 			);
 			path = Simple;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E87FC9E24F207F6008A247B /* PostViewController.swift in Sources */,
+				9801364424F3420700E8E8CA /* SearchBarController.swift in Sources */,
 				98F3D42324EDC803006DAB05 /* MainScreen.swift in Sources */,
 				6E87FC9C24F2077B008A247B /* EscolherImagem.swift in Sources */,
 				98FF078D24F144A500CA9415 /* DeeplinkScreenManager.swift in Sources */,
