@@ -14,7 +14,7 @@ struct BeagleConfig {
 
     static let dependencies = BeagleDependencies()
     static func config() {
-        let baseUrl: URL? = URL(string: "http://localhost:8080")
+        let baseUrl: URL? = URL(string: "https://simple-hacka.herokuapp.com/")
         dependencies.urlBuilder = UrlBuilder(baseUrl: baseUrl)
         dependencies.theme = AppTheme.theme
         deeplinkManager()
