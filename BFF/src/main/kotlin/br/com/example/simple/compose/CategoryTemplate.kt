@@ -23,14 +23,15 @@ import br.com.zup.beagle.widget.ui.Text
 
 class CategoryTemplate(
         val text: String,
-        val image: String
+        val image: String,
+        val url: String
 ) : ComposeComponent {
     override fun build(): ServerDrivenComponent {
         return Container(children =
         listOf(
                 Touchable(
                         onPress = listOf(
-                                Navigate.PushView(route = Route.Remote(url = "/search"))
+                                Navigate.PushView(route = Route.Remote(url = "/search$url"))
                         ),
                         child = Image(path = ImagePath.Local.justMobile(image), mode = ImageContentMode.FIT_CENTER).applyStyle(
                                 style = Style(

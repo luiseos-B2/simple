@@ -32,9 +32,13 @@ class SearchFragment : Fragment() {
     private fun setupSearchView() {
         search_view.setOnQueryTextFocusChangeListener(object : SearchView.OnQueryTextListener, View.OnFocusChangeListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
                 text_not_found.visibility = View.GONE
-                if (query.isNullOrBlank()) {
-                    query?.let {
+                if (newText.isNullOrBlank()) {
+                    newText?.let {
                         when {
                             it.contains("oportunidade") -> {
                                 title.text = "Oportunidades"
@@ -59,11 +63,6 @@ class SearchFragment : Fragment() {
                         }
                     }
                 }
-
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
                 return false
             }
 
