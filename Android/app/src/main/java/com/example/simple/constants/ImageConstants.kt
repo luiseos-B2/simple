@@ -40,4 +40,8 @@ const val ORANGE_BANNER2 = "orangeBanner2"
 const val DICAS = "Dicas"
 const val MAIS = "Mais"
 const val EDITAR = "Editar"
+const val CLEAN_GARDEN = "pessoa"
+const val SHARE_ICON = "share"
+
+
 

@@ -9,3 +9,5 @@ const val STYLE_TEXT_BOLD_SYSTEM_16 = "Style.Text.Bold.System.16"
 const val STYLE_TEXT_SYSTEM_LIGHT = "Style.Text.System.Light"
 const val STYLE_TEXT_H1 = "Style.H1.Text"
 const val STYLE_BUTTON_BORDER = "Style.Border.Blue.System.16"
+const val STYLE_TEXT_SYSTEM_BOLD_12 = "Style.Text.System.Bold.12"
+
