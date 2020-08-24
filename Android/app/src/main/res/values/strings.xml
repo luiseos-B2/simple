@@ -3,4 +3,5 @@
     <string name="btn_tentar_novamente">Tentar Novamente</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="publish_not_found">Essa publicação não foi encontrada</string>
 </resources>

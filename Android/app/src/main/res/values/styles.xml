@@ -62,7 +62,6 @@
         <item name="android:textSize">30sp</item>
     </style>
 
-
     <style name="Style.Text.System.Light" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">15sp</item>
     </style>
