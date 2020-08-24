@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/login")
-class LoginController (
+class LoginController(
         private val loginService: LoginService
-){
+) {
 
     @GetMapping
     fun getLoginScreen() = this.loginService.getLoginScreen()

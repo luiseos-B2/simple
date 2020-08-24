@@ -48,7 +48,7 @@ class LoginScreen : ScreenBuilder {
             type = TextInputType.EMAIL,
             styleId = STYLE_TEXT_INPUT
     ).applyStyle(style = Style(
-            size = Size(width = 85.unitPercent(), height = 5.unitPercent()),
+            size = Size(width = 85.unitPercent(), height = 7.unitPercent()),
             margin = EdgeValue(top = 50.unitReal())
     )
     )
@@ -59,7 +59,7 @@ class LoginScreen : ScreenBuilder {
             type = TextInputType.PASSWORD,
             styleId = STYLE_TEXT_INPUT
     ).applyStyle(style = Style(
-            size = Size(width = 85.unitPercent(), height = 5.unitPercent()),
+            size = Size(width = 85.unitPercent(), height = 7.unitPercent()),
             margin = EdgeValue(top = 20.unitReal())
     )
     )
@@ -82,7 +82,7 @@ class LoginScreen : ScreenBuilder {
     ).applyStyle(
             Style(
                     margin = EdgeValue(top = 10.unitReal()),
-                    size = Size(width = 85.unitPercent(), height = 5.unitPercent())
+                    size = Size(width = 85.unitPercent(), height = 7.unitPercent())
             )
     )
 
@@ -93,7 +93,7 @@ class LoginScreen : ScreenBuilder {
                     Navigate.OpenNativeRoute(route = "home")
             )
     ).applyStyle(style = Style(
-            size = Size(width = 50.unitPercent(), height = 15.unitPercent()),
+            size = Size(width = 180.unitReal(), height = 40.unitReal()),
             cornerRadius = CornerRadius(radius = 10.0),
             flex = Flex(alignSelf = AlignSelf.CENTER),
             backgroundColor = BLUE
@@ -107,7 +107,7 @@ class LoginScreen : ScreenBuilder {
                     Navigate.PushView(route = Route.Remote(url = "/register"))
             )
     ).applyStyle(style = Style(
-            size = Size(width = 65.unitPercent(), height = 15.unitPercent()),
+            size = Size(width = 85.unitPercent(), height = 40.unitReal()),
             margin = EdgeValue(all = 10.unitReal()),
             cornerRadius = CornerRadius(radius = 10.0),
             flex = Flex(alignSelf = AlignSelf.CENTER),
@@ -121,7 +121,7 @@ class LoginScreen : ScreenBuilder {
                     signUpButton
             )
     ).applyStyle(style = Style(
-            margin = EdgeValue(top = 50.unitReal()),
+            margin = EdgeValue(top = 20.unitPercent()),
             size = Size(width = 100.unitPercent(), height = 30.unitPercent()),
             flex = Flex(justifyContent = JustifyContent.SPACE_BETWEEN, grow = 1.0)
     )

@@ -1,14 +1,13 @@
 package br.com.example.simple.screen
 
-import br.com.example.simple.action.OpenWhatsApp
 import br.com.example.simple.compose.ButtonPost
 import br.com.example.simple.compose.PostsCardTemplate
-import br.com.example.simple.compose.ProductEditCardTemplate
 import br.com.example.simple.constants.STYLE_NAVIGATION_BAR
 import br.com.zup.beagle.core.Display
+import br.com.zup.beagle.widget.action.Navigate
 import br.com.zup.beagle.widget.layout.*
 
-object PublicacoesScreen: ScreenBuilder {
+object PublishScreen : ScreenBuilder {
     override fun build(): Screen {
         return Screen(
                 navigationBar = NavigationBar(
@@ -75,6 +74,7 @@ object PublicacoesScreen: ScreenBuilder {
             )
     )
 
-    private fun createButtonWhatsapp() = ButtonPost("Quero entrar em contato", Display.FLEX, OpenWhatsApp())
+    private fun createButtonWhatsapp() = ButtonPost("Quero entrar em contato", Display.FLEX,
+            Navigate.OpenExternalURL(url = "https://api.whatsapp.com/send?phone=5534992569623&text=Simple"))
 
 }

@@ -20,7 +20,7 @@ class ReviewTemplate(
         val image: String,
         val name: String,
         val review: String
-): ComposeComponent {
+) : ComposeComponent {
 
     override fun build(): ServerDrivenComponent {
 
@@ -34,19 +34,19 @@ class ReviewTemplate(
                 listOf(
                         Text(text = name, styleId = STYLE_TEXT_NORMAL_SYSTEM_16, textColor = LIGHT_GREY)
                                 .applyStyle(style = Style(
-                                            margin = EdgeValue(top = 5.unitReal(), left = 10.unitReal()))),
+                                        margin = EdgeValue(top = 5.unitReal(), left = 10.unitReal()))),
                         Text(text = review, styleId = STYLE_TEXT_SYSTEM_LIGHT, textColor = LIGHT_GREY)
                                 .applyStyle(style = Style(
-                                            margin = EdgeValue(top = 5.unitReal(), left = 10.unitReal())))
-                    )
+                                        margin = EdgeValue(top = 5.unitReal(), left = 10.unitReal())))
+                )
                 )
         )).applyStyle(
                 style = Style(
-                    backgroundColor = WHITE,
-                    margin = EdgeValue(left = 10.unitReal(), right = 10.unitReal(), top = 10.unitReal()),
-                    size = Size(width = 310.unitReal(), height = 100.unitReal()),
-                    flex = Flex(flexDirection = FlexDirection.ROW, alignSelf = AlignSelf.CENTER),
-                    cornerRadius = CornerRadius(radius = 20.0)
-        ))
+                        backgroundColor = WHITE,
+                        margin = EdgeValue(left = 10.unitReal(), right = 10.unitReal(), top = 10.unitReal()),
+                        size = Size(width = 310.unitReal(), height = 100.unitReal()),
+                        flex = Flex(flexDirection = FlexDirection.ROW, alignSelf = AlignSelf.CENTER),
+                        cornerRadius = CornerRadius(radius = 20.0)
+                ))
     }
 }

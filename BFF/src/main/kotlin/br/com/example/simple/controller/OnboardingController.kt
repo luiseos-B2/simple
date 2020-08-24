@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/onboarding")
 class OnboardingController(
         private val onboardingService: OnboardingService
-){
+) {
     @GetMapping
     fun getOnboardingScreen() = this.onboardingService.getOnboardingScreen()
 

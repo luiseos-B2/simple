@@ -26,7 +26,7 @@ class ButtonDefaultCompose(
         val action: Action,
         val nameIcon: String,
         val displayView: Display
-): ComposeComponent {
+) : ComposeComponent {
     override fun build() = Container(
             children = listOf(
                     Touchable(

@@ -35,15 +35,16 @@ class CategoryTemplate(
                         ),
                         child = Image(path = ImagePath.Local.justMobile(image), mode = ImageContentMode.FIT_CENTER).applyStyle(
                                 style = Style(
-                                        size = Size(width = 80.unitPercent(), height = 85.unitReal()),
+                                        size = Size(width = 70.unitPercent(), height = 75.unitReal()),
                                         margin = EdgeValue(left = 10.unitReal(), right = 10.unitReal()),
                                         cornerRadius = CornerRadius(radius = 42.5)
 
                                 )
                         )
                 ),
-                Text(text = text, alignment = TextAlignment.CENTER, styleId = STYLE_TEXT_SYSTEM_LIGHT, textColor = DARK_BLUE)
-            )
+                Text(text = text, alignment = TextAlignment.CENTER,
+                        styleId = STYLE_TEXT_SYSTEM_LIGHT, textColor = DARK_BLUE)
+        )
         )
     }
 }

@@ -11,9 +11,12 @@ import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
 import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.*
-import br.com.zup.beagle.widget.ui.*
+import br.com.zup.beagle.widget.ui.Image
+import br.com.zup.beagle.widget.ui.ImagePath
+import br.com.zup.beagle.widget.ui.TabItem
+import br.com.zup.beagle.widget.ui.TabView
 
-object StoreScreen: ScreenBuilder {
+object StoreScreen : ScreenBuilder {
     override fun build(): Screen {
         return Screen(
                 navigationBar = NavigationBar(title = "Loja", styleId = STYLE_NAVIGATION_BAR),
@@ -46,7 +49,7 @@ object StoreScreen: ScreenBuilder {
                     ProductCardTemplate(image = "product2", priceText = "R$ 20.00", productName = "Camisa Adidas Feminina", description = "Marca\tIBI MODAS\n" +
                             "Modelo\tBABY LOOK\n" + "Desenho do tecido\tGeométrico\n" + "Outras características\n" +
                             "Gênero: Feminino\n" + "Material principal: 100%ALGODÃO\n" + "Tipo de manga: Curta\n" + "Tipo de gola: REDONDA")
-                    )
+            )
     )
 
     private val opportunitiesList = Container(
@@ -64,28 +67,28 @@ object StoreScreen: ScreenBuilder {
     ).applyStyle(style = Style(backgroundColor = LIGHT_BACKGROUND, flex = Flex(alignItems = AlignItems.CENTER)))
 
     private val reviewsList = Container(children =
-        listOf(
-                ScrollView(
-                        scrollBarEnabled = false,
-                        children = listOf(
-                                ReviewTemplate(
-                                        image = "reviewUser",
-                                        name = "José João",
-                                        review = "Serviço muito bem feito! Com certeza voltarei a entrar em \n" + "contato caso preciso de algo."
-                                ),
-                                ReviewTemplate(
-                                        image = "reviewUser",
-                                        name = "Maria Joana ",
-                                        review = "Entrega chegou perfeitamente! Material é muito bom"
-                                ),
-                                ReviewTemplate(
-                                        image = "reviewUser",
-                                        name = "Marco Augusto",
-                                        review = "Muito bom, acabamento perfeito!\n"
-                                )
-                        )
-                )
-        )
+    listOf(
+            ScrollView(
+                    scrollBarEnabled = false,
+                    children = listOf(
+                            ReviewTemplate(
+                                    image = "reviewUser",
+                                    name = "José João",
+                                    review = "Serviço muito bem feito! Com certeza voltarei a entrar em \n" + "contato caso preciso de algo."
+                            ),
+                            ReviewTemplate(
+                                    image = "reviewUser",
+                                    name = "Maria Joana ",
+                                    review = "Entrega chegou perfeitamente! Material é muito bom"
+                            ),
+                            ReviewTemplate(
+                                    image = "reviewUser",
+                                    name = "Marco Augusto",
+                                    review = "Muito bom, acabamento perfeito!\n"
+                            )
+                    )
+            )
+    )
     ).applyStyle(style = Style(
             backgroundColor = LIGHT_BACKGROUND,
             size = Size(100.unitPercent(), height = 100.unitPercent())

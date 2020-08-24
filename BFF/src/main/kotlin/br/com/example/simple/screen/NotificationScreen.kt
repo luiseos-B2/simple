@@ -8,7 +8,7 @@ import br.com.zup.beagle.ext.applyFlex
 import br.com.zup.beagle.widget.core.Flex
 import br.com.zup.beagle.widget.layout.*
 
-object NotificationScreen: ScreenBuilder {
+object NotificationScreen : ScreenBuilder {
     override fun build(): Screen {
         return Screen(
                 style = Style(backgroundColor = LIGHT_BACKGROUND),

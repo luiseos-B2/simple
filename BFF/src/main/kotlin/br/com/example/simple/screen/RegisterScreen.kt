@@ -95,22 +95,19 @@ class RegisterScreen : ScreenBuilder {
                             Style(
                                     backgroundColor = BLUE,
                                     cornerRadius = CornerRadius(10.0),
-                                    size = Size(width = 50.unitPercent(), height = 15.unitPercent()),
-                                    margin = EdgeValue(
-                                            bottom = 30.unitReal()
-                                    ),
+                                    size = Size(width = 180.unitReal(), height = 40.unitReal()),
                                     flex = Flex(alignSelf = AlignSelf.CENTER)
                             )
                     )
             )
-    ).applyFlex(Flex(justifyContent = JustifyContent.CENTER,grow = 1.0))
+    ).applyFlex(Flex(justifyContent = JustifyContent.CENTER, grow = 1.0))
 
     private val imageLogo = Image(
             ImagePath.Local.justMobile(REGISTER)
     ).applyStyle(
             Style(
                     flex = Flex(alignSelf = AlignSelf.CENTER),
-                    size = Size(80.unitReal(),80.unitReal()),
+                    size = Size(80.unitReal(), 80.unitReal()),
                     margin = EdgeValue(vertical = 30.unitReal())
             )
     )

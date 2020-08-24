@@ -18,7 +18,7 @@ class SearchProductsScreen : ScreenBuilder {
                                     children = listOf(
                                             PostsCardTemplate(
                                                     title = "Perfumaria Silva",
-                                                    location = "B. Santa Mônica - Uberlândia - MG",
+                                                    location = "B. Saraiva - Uberlândia (MG)",
                                                     imageUrl = "https://cdn.awsli.com.br/600x450/596/596667/produto/29772334/perfume-chanel-chance-edp-feminino-100ml-072538d9.jpg",
                                                     subtitle = "Perfume Chanel Chance EDP Feminino 100ml",
                                                     priceText = "R$ 255,99",
@@ -27,7 +27,7 @@ class SearchProductsScreen : ScreenBuilder {
                                             ),
                                             PostsCardTemplate(
                                                     title = "Livraria B1",
-                                                    location = "Centro - Uberlândia - MG",
+                                                    location = "Centro - Uberlândia (MG)",
                                                     imageUrl = "https://images-submarino.b2w.io/produtos/imagens/6719447/6719448_1GG.jpg",
                                                     subtitle = "Livro - A Cabana - Capa Filme - William P. Young",
                                                     priceText = "R$ 43,99",
@@ -36,7 +36,7 @@ class SearchProductsScreen : ScreenBuilder {
                                             ),
                                             PostsCardTemplate(
                                                     title = "Eletrônicos Basso",
-                                                    location = "B. São Jorge - Uberlândia - MG",
+                                                    location = "B. Martins - Uberlândia (MG)",
                                                     imageUrl = "https://images-americanas.b2w.io/produtos/01/00/img/1754124/8/1754124827_1SZ.jpg",
                                                     subtitle = "Fone de Ouvido Bluetooth Xiaomi Redmi Airdots",
                                                     priceText = "R$ 244,72",
@@ -45,7 +45,7 @@ class SearchProductsScreen : ScreenBuilder {
                                             ),
                                             PostsCardTemplate(
                                                     title = "Relojoaria Coelho",
-                                                    location = "B. Luizote - Uberlândia - MG",
+                                                    location = "B. Luizote - Uberlândia (MG)",
                                                     imageUrl = "https://images-americanas.b2w.io/produtos/01/00/images/79597/8/79597872_1SZ.jpg",
                                                     subtitle = "Relógio Masculino Preto Black Motion Design Quartz",
                                                     priceText = "R$ 88,99",
@@ -54,7 +54,7 @@ class SearchProductsScreen : ScreenBuilder {
                                             ),
                                             PostsCardTemplate(
                                                     title = "Doceria Silva",
-                                                    location = "B. Luizote - Uberlândia - MG",
+                                                    location = "B. Luizote - Uberlândia (MG)",
                                                     imageUrl = "https://img.itdg.com.br/tdg/images/recipes/000/081/014/72081/72081_original.jpg?mode=crop&width=710&height=400",
                                                     subtitle = "Bolo Floresta Negra",
                                                     priceText = "R$ 59,99",

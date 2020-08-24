@@ -1,7 +1,6 @@
 package br.com.example.simple.compose
 
 import br.com.example.simple.constants.STYLE_TEXT_NORMAL_SYSTEM_16
-import br.com.zup.beagle.builder.widget.size
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.PositionType
 import br.com.zup.beagle.core.ServerDrivenComponent
@@ -22,11 +21,11 @@ import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.ImagePath
 import br.com.zup.beagle.widget.ui.Text
 
-class ServicesBannerTemplate (
+class ServicesBannerTemplate(
         val textColor: String,
         val image: String,
         val description: String
-): ComposeComponent{
+) : ComposeComponent {
     override fun build(): ServerDrivenComponent {
         return Touchable(
                 onPress = listOf(
@@ -44,7 +43,7 @@ class ServicesBannerTemplate (
                         ),
                         Touchable(
                                 onPress = listOf(
-                                        Navigate.OpenExternalURL(url = "https://api.whatsapp.com/send?phone=5534999999999&text=Simple")
+                                        Navigate.OpenExternalURL(url = "https://api.whatsapp.com/send?phone=5534992569623&text=Simple")
                                 ),
                                 child = Image(path = ImagePath.Local.justMobile("whatsapp")).applyStyle(style = Style(
                                         size = Size(height = 35.unitReal(), width = 35.unitReal()),

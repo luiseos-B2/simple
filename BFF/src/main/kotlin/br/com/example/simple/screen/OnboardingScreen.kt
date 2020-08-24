@@ -16,7 +16,10 @@ import br.com.zup.beagle.widget.action.SetContext
 import br.com.zup.beagle.widget.context.ContextData
 import br.com.zup.beagle.widget.context.expressionOf
 import br.com.zup.beagle.widget.core.*
-import br.com.zup.beagle.widget.layout.*
+import br.com.zup.beagle.widget.layout.Container
+import br.com.zup.beagle.widget.layout.PageView
+import br.com.zup.beagle.widget.layout.Screen
+import br.com.zup.beagle.widget.layout.ScreenBuilder
 import br.com.zup.beagle.widget.pager.PageIndicator
 import br.com.zup.beagle.widget.ui.Button
 import br.com.zup.beagle.widget.ui.Image
@@ -62,7 +65,7 @@ class OnboardingScreen : ScreenBuilder {
     )
 
     private val page2 = createPage(
-            text = "Ganhe tranquilidade na contratação de serviçõs graças às avaliações de outros usuários!",
+            text = "Ganhe tranquilidade na contratação de serviços graças às avaliações de outros usuários!",
             firstImage = ACORDO,
             secondImage = SUPPORT,
             nameButton = "",
@@ -71,10 +74,10 @@ class OnboardingScreen : ScreenBuilder {
     )
 
     private val page3 = createPage(
-            text = "Tudo isso em um só aplicativo, juntando todos comercios e prestadores de servicos em um só lugar!",
+            text = "Tudo isso em um só aplicativo, juntando todos comércios e prestadores de serviços em um só lugar!",
             firstImage = MARKETING,
             secondImage = VENDAS,
-            nameButton = "Proximo",
+            nameButton = "Próximo",
             actionButton = Navigate.PushView(route = Route.Remote(url = "/login")),
             displayButton = Display.FLEX
     )

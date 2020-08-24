@@ -53,7 +53,7 @@ class ProductEditCardTemplate(
                                 size = Size(width = 30.unitReal(), height = 30.unitReal()),
                                 margin = EdgeValue(top = 15.unitReal(), left = 15.unitReal()),
                                 positionType = PositionType.ABSOLUTE
-                                )
+                        )
                 ),
                 createicon(EXIT).applyStyle(
                         Style(

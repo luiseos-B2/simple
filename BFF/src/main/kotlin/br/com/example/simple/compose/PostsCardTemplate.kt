@@ -8,12 +8,9 @@ import br.com.zup.beagle.ext.applyFlex
 import br.com.zup.beagle.ext.applyStyle
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
-import br.com.zup.beagle.widget.action.Navigate
-import br.com.zup.beagle.widget.action.Route
 import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.ComposeComponent
 import br.com.zup.beagle.widget.layout.Container
-import br.com.zup.beagle.widget.navigation.Touchable
 import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.ImagePath
 import br.com.zup.beagle.widget.ui.Text
@@ -25,10 +22,10 @@ class PostsCardTemplate(
         val location: String,
         val subtitle: String,
         val description: String,
-        val button : ButtonPost
+        val button: ButtonPost
 ) : ComposeComponent {
     override fun build(): ServerDrivenComponent {
-        return  Container(children =
+        return Container(children =
         listOf(
                 Container(children =
                 listOf(
@@ -58,7 +55,7 @@ class PostsCardTemplate(
                                 top = 5.unitReal(),
                                 bottom = 10.unitReal(),
                                 right = 10.unitReal(),
-                                left =  10.unitReal()
+                                left = 10.unitReal()
                         ))),
                 Container(
                         children = listOf(

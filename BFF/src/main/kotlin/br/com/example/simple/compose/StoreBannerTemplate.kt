@@ -18,7 +18,7 @@ import br.com.zup.beagle.widget.ui.ImagePath
 
 class StoreBannerTemplate(
         val banner: String
-): ComposeComponent {
+) : ComposeComponent {
     override fun build(): ServerDrivenComponent {
         return Container(children = listOf(
                 Image(path = ImagePath.Local.justMobile(banner), mode = ImageContentMode.CENTER_CROP).applyStyle(

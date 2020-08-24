@@ -21,7 +21,7 @@ import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.ImagePath
 import br.com.zup.beagle.widget.ui.Text
 
-object ProfileScreen: ScreenBuilder {
+object ProfileScreen : ScreenBuilder {
     override fun build(): Screen {
         return Screen(
                 navigationBar = NavigationBar(title = "Perfil", styleId = STYLE_NAVIGATION_BAR),
@@ -30,7 +30,7 @@ object ProfileScreen: ScreenBuilder {
                 listOf(
                         profileContainer,
                         profileOptions
-                    )
+                )
                 )
         )
     }
@@ -41,23 +41,23 @@ object ProfileScreen: ScreenBuilder {
     )
 
     private val userInfoContainer = Container(children =
-        listOf(
-                Text(text = "Gabriela Coelho", styleId = STYLE_TEXT_H1, textColor = BLUE, alignment = TextAlignment.LEFT),
-                Text(text = "gabsworks@gmail.com", styleId = STYLE_TEXT_SYSTEM_LIGHT, textColor = BLUE, alignment = TextAlignment.LEFT),
-                Button(
-                        text =  "Editar Perfil",
-                        styleId = STYLE_BUTTON_BORDER,
-                        onPress = listOf(
-                                alert
-                        )
-                ).applyStyle(style = Style(
-                        size = Size(width = 50.unitPercent(), height = 25.unitPercent()),
-                        margin = EdgeValue(top = 10.unitReal()),
-                        cornerRadius = CornerRadius(radius = 10.0),
-                        backgroundColor = LIGHT_BACKGROUND
-                )
-                )
-        )).applyStyle(style = Style(
+    listOf(
+            Text(text = "Gabriela Coelho", styleId = STYLE_TEXT_H1, textColor = BLUE, alignment = TextAlignment.LEFT),
+            Text(text = "gabsworks@gmail.com", styleId = STYLE_TEXT_SYSTEM_LIGHT, textColor = BLUE, alignment = TextAlignment.LEFT),
+            Button(
+                    text = "Editar Perfil",
+                    styleId = STYLE_BUTTON_BORDER,
+                    onPress = listOf(
+                            alert
+                    )
+            ).applyStyle(style = Style(
+                    size = Size(width = 50.unitPercent(), height = 25.unitPercent()),
+                    margin = EdgeValue(top = 10.unitReal()),
+                    cornerRadius = CornerRadius(radius = 10.0),
+                    backgroundColor = LIGHT_BACKGROUND
+            )
+            )
+    )).applyStyle(style = Style(
             margin = EdgeValue(left = 10.unitReal())
     ))
 
@@ -68,7 +68,7 @@ object ProfileScreen: ScreenBuilder {
                             cornerRadius = CornerRadius(50.0))
             ),
             userInfoContainer
-        )
+    )
     ).applyStyle(style = Style(
             margin = EdgeValue(left = 15.unitReal(), top = 30.unitReal()),
             flex = Flex(flexDirection = FlexDirection.ROW)
@@ -90,7 +90,7 @@ object ProfileScreen: ScreenBuilder {
 
     private val buttonPublicacoes = ButtonDefaultCompose(
             textButton = "Minhas Publicações",
-            action = Navigate.PushStack(route = Route.Remote(url = "/publicacoes")),
+            action = Navigate.PushStack(route = Route.Remote(url = "/myposts")),
             nameIcon = PUBLICACOES,
             displayView = Display.NONE
     ).build()
@@ -103,13 +103,12 @@ object ProfileScreen: ScreenBuilder {
                     buttonPublicacoes
             )
     ).applyStyle(style = Style(
-            margin = EdgeValue(horizontal = 15.unitReal(),top = 10.unitReal()),
+            margin = EdgeValue(horizontal = 15.unitReal(), top = 10.unitReal()),
             cornerRadius = CornerRadius(20.0),
             backgroundColor = WHITE,
-            padding = EdgeValue(horizontal = 20.unitReal(),vertical = 10.unitReal())
+            padding = EdgeValue(horizontal = 20.unitReal(), vertical = 10.unitReal())
     )
     )
-
 
 
 }

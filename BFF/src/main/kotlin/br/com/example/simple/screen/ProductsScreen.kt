@@ -9,12 +9,12 @@ import br.com.zup.beagle.widget.action.Alert
 import br.com.zup.beagle.widget.layout.*
 import br.com.zup.beagle.widget.ui.ImagePath
 
-object ProductsScreen: ScreenBuilder {
+object ProductsScreen : ScreenBuilder {
 
     val navigationBarItem = NavigationBarItem(
             text = "",
             image = ImagePath.Local.justMobile(MAIS),
-            action =  Alert(
+            action = Alert(
                     title = "Atenção",
                     message = "Tela não criada!"
             )
@@ -36,12 +36,13 @@ object ProductsScreen: ScreenBuilder {
                 )
         )
     }
+
     private val products = ScrollView(
             scrollBarEnabled = false,
             children = listOf(
                     ProductEditCardTemplate(image = "product4", priceText = "R$ 7.80", productName = "Batom Basic 01 VulT", description = "Super confortável nos lábios, o Batom Basic da Vult proporciona uma boa cobertura e um acabamento cremoso. Fácil de espalhar e em textura leve, o batom garante lábios com cores sensacionais."),
                     ProductEditCardTemplate(image = "product1", priceText = "R$ 10.00", productName = "Camisa Feminina Baby Look Billie Eilish", description = "\n" +
-                            "Tecido: 100%algodão fio 30.1\n" + "\n" +  "ESTAMPA: SUBLIMAÇÃO E VINIL EMBORRACHADO\n" +  "\n" +
+                            "Tecido: 100%algodão fio 30.1\n" + "\n" + "ESTAMPA: SUBLIMAÇÃO E VINIL EMBORRACHADO\n" + "\n" +
                             "Qualidade do Tecido, Estampa e Costura.\n" + "\n" + "Excelente custo beneficio, preço baixo e qualidade!\n" + "\n" +
                             "baby look Super confortável, Tecido leve ideal para treinos e Lazer aos finais de semana.\n"),
                     ProductEditCardTemplate(image = "product2", priceText = "R$ 20.00", productName = "Camisa Adidas Feminina", description = "Marca\tIBI MODAS\n" +
