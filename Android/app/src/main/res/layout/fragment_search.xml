@@ -13,7 +13,7 @@
         android:focusableInTouchMode="false"
         android:iconifiedByDefault="true"
         android:inputType="text"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppThemeSearch"
         android:queryHint="Pesquisar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
